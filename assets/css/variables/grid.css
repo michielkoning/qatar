@@ -1,14 +1,8 @@
 :root {
-  --gutter: 0.5rem;
-  --logo-size: 2rem;
-  @media (--viewport-lg) {
-    --logo-size: 3rem;
-    --gutter: 1rem;
-  }
-
-  --header-background-color: var(--color-primary);
-  --header-position: absolute;
-  --menu-width: 14rem;
-  --panel-width: 24rem;
-  --header-height: 5rem;
+  --container-width-xs: 18rem;
+  --container-width-sm: 32rem;
+  --container-width-md: 52rem;
+  --container-width-lg: 64rem;
+  --container-width-xlg: 72rem;
+  --gutter: 1rem;
 }
