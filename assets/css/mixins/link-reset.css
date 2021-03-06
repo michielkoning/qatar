@@ -1,0 +1,9 @@
+@define-mixin link-reset {
+  background-image: none;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}

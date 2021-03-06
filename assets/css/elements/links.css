@@ -1,0 +1,12 @@
+a {
+  color: var(--color-primary);
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: center bottom 0;
+  text-decoration: text-decoration;
+
+  &:hover,
+  &:focus {
+    background-image: none;
+  }
+}

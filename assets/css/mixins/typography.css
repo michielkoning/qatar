@@ -1,0 +1,6 @@
+@define-mixin text-sub {
+  display: block;
+  font-size: var(--font-size-small);
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-normal);
+}

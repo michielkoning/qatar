@@ -1,0 +1,9 @@
+@define-mixin row {
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+@define-mixin column {
+  padding-left: calc(var(--gutter) / 2);
+  padding-right: calc(var(--gutter) / 2);
+}

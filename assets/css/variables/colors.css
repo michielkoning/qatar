@@ -1,0 +1,12 @@
+:root {
+  --color-primary: var(--brand-color-primary, #8a1538);
+  --color-cta: var(--brand-color-cta, #009fd4);
+  --color-white: var(--brand-color-white, #fff);
+  --color-gray-lightest: var(--brand-color-gray-lightest, #f1f4f5);
+  --color-gray-lighter: var(--brand-color-gray-lighter, #e6e6e6);
+  --color-gray-light: var(--brand-color-gray-light, #becdd3);
+  --color-gray: var(--brand-color-gray, #a3b8c0);
+  --color-gray-dark: var(--brand-color-gray-dark, #728186);
+  --color-gray-darker: var(--brand-color-gray-darker, #41494c);
+  --color-black: var(--brand-color-black, #000);
+}

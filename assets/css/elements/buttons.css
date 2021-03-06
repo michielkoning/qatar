@@ -1,0 +1,62 @@
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a,
+button {
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+.btn {
+  @mixin btn;
+}
+
+.btn-with-icon {
+  @mixin btn-with-icon;
+}
+
+.btn-primary {
+  @mixin btn-primary;
+
+  &:hover,
+  &:focus {
+    @mixin btn-primary-hover;
+  }
+}
+
+.btn-cta {
+  @mixin btn-cta;
+
+  &:hover,
+  &:focus {
+    @mixin btn-cta-hover;
+  }
+}
+
+.btn-ghost {
+  @mixin btn-ghost;
+
+  &:hover,
+  &:focus {
+    @mixin btn-ghost-hover;
+  }
+}
+
+.btn-with-sub-text {
+  @mixin btn-with-sub-text;
+}
