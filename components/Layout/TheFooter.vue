@@ -17,9 +17,5 @@
 <style scoped lang="postcss">
 .list {
   @mixin list-reset;
-
-  padding: 1em 0;
-  display: flex;
-  justify-content: space-between;
 }
 </style>
