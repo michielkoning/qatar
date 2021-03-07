@@ -1,5 +1,8 @@
 <template>
-  <div class="container">Nieuws</div>
+  <div class="container">
+    Nieuws
+    <posts />
+  </div>
 </template>
 
 <script>

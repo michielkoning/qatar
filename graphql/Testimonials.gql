@@ -1,0 +1,13 @@
+query GET_TESTIMONIALS($first: Int) {
+  testimonials(first: $first) {
+    edges {
+      node {
+        title
+        databaseId
+        testimonialsGroup {
+          quote
+        }
+      }
+    }
+  }
+}

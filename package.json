@@ -12,11 +12,13 @@
     "lint": "npm run lint:js && npm run lint:style"
   },
   "dependencies": {
+    "@nuxtjs/apollo": "^4.0.1-rc.5",
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/composition-api": "^0.22.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/svg-sprite": "^0.5.2",
     "core-js": "^3.8.3",
+    "graphql-tag": "^2.11.0",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {

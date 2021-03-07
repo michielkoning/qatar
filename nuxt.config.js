@@ -17,10 +17,19 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
+  apollo: {
+    clientConfigs: {
+      default: {
+        // required
+        httpEndpoint: `https://api.haarlembijdeles.nl/graphql`,
+      },
+    },
+  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
     '~/components',
+    '~/components/Blog',
     '~/components/Forms',
     '~/components/Layout',
     '~/components/Shared',
@@ -39,6 +48,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/svg-sprite',
     '@nuxtjs/axios',
+    '@nuxtjs/apollo',
+
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
   ],

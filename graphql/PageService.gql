@@ -1,0 +1,26 @@
+#import "./Fragments/PageContent.gql"
+#import "./Fragments/ImageHero.gql"
+
+query GET_PAGE_BY_URI($pageId: ID!) {
+  page(id: $pageId, idType: DATABASE_ID) {
+    ...pageContent
+    forStudentsAndParentsGroup {
+      student {
+        text
+      }
+      parents {
+        text
+      }
+    }
+    pricesGroup {
+      image {
+        ...imageHero
+      }
+      prices {
+        price
+        title
+        recommended
+      }
+    }
+  }
+}

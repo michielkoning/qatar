@@ -1,0 +1,34 @@
+#import "./Fragments/ImageArchive.gql"
+
+query GET_POST_BY_URI($uri: ID!) {
+  post(id: $uri, idType: URI) {
+    featuredImage {
+      node {
+        ...imageArchive
+      }
+    }
+    content
+    databaseId
+    title
+    date
+    slug
+    seo {
+      focuskw
+      metaDesc
+      metaKeywords
+      metaRobotsNofollow
+      metaRobotsNoindex
+      opengraphDescription
+      opengraphImage {
+        archive: sourceUrl(size: ARCHIVE)
+      }
+      opengraphTitle
+      title
+      twitterDescription
+      twitterImage {
+        archive: sourceUrl(size: ARCHIVE)
+      }
+      twitterTitle
+    }
+  }
+}

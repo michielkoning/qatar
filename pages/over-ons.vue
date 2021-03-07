@@ -1,7 +1,21 @@
 <template>
-  <div class="container">Over ons</div>
+  <app-page v-if="page" :page="page" />
 </template>
 
 <script>
-export default {}
+import PageQuery from '~/graphql/Page.gql'
+
+export default {
+  async asyncData({ app }) {
+    const page = await app.apolloProvider.defaultClient.query({
+      query: PageQuery,
+      variables: {
+        pageId: 502,
+      },
+    })
+    return {
+      page: page.data.page,
+    }
+  },
+}
 </script>

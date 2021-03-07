@@ -1,0 +1,29 @@
+#import "./ImageHero.gql"
+
+fragment pageContent on Page {
+  title
+  content
+  featuredImage {
+    node {
+      ...imageHero
+    }
+  }
+  seo {
+    focuskw
+    metaDesc
+    metaKeywords
+    metaRobotsNofollow
+    metaRobotsNoindex
+    opengraphDescription
+    opengraphImage {
+      archive: sourceUrl(size: ARCHIVE)
+    }
+    opengraphTitle
+    title
+    twitterDescription
+    twitterImage {
+      archive: sourceUrl(size: ARCHIVE)
+    }
+    twitterTitle
+  }
+}
