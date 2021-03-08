@@ -31,11 +31,35 @@ export default {
     '~/components',
     '~/components/Blog',
     '~/components/Forms',
-    '~/components/Forms/FormsComponents',
+    '~/components/Forms/FormComponents',
     '~/components/Layout',
     '~/components/Shared',
   ],
+  i18n: {
+    defaultLocale: 'nl',
+    lazy: true,
 
+    vueI18nLoader: true,
+    vueI18n: {
+      dateTimeFormats: {
+        nl: {
+          short: {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          },
+          long: {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            weekday: 'short',
+            hour: 'numeric',
+            minute: 'numeric',
+          },
+        },
+      },
+    },
+  },
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
@@ -50,7 +74,7 @@ export default {
     '@nuxtjs/svg-sprite',
     '@nuxtjs/axios',
     '@nuxtjs/apollo',
-
+    'nuxt-i18n',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
   ],

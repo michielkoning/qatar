@@ -1,5 +1,5 @@
 <template>
-  <time :datetime="date | datetime">{{ date }}</time>
+  <time :datetime="date | datetime">{{ $d(new Date(date), 'short') }}</time>
 </template>
 
 <script>

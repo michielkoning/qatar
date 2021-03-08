@@ -1,7 +1,9 @@
 <template>
   <center-wrapper v-if="page">
-    <h1>{{ page.title }}</h1>
-    <div v-html="page.content" />
+    <article class="article">
+      <h1>{{ page.title }}</h1>
+      <div v-html="page.content" />
+    </article>
   </center-wrapper>
 </template>
 

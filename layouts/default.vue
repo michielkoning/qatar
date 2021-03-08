@@ -1,10 +1,10 @@
 <template>
   <div class="page">
-    <TheHeader />
+    <the-header />
     <main class="main">
-      <Nuxt />
+      <nuxt />
     </main>
-    <TheFooter />
+    <the-footer />
   </div>
 </template>
 
@@ -17,5 +17,6 @@
 
 .main {
   flex: 1 0 auto;
+  padding-bottom: 2em;
 }
 </style>

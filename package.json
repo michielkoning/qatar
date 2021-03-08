@@ -19,7 +19,8 @@
     "@nuxtjs/svg-sprite": "^0.5.2",
     "core-js": "^3.8.3",
     "graphql-tag": "^2.11.0",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "nuxt-i18n": "^6.20.6"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",

@@ -29,6 +29,7 @@
 .footer {
   background: var(--color-primary);
   color: var(--color-white);
+  padding: 2em 0;
 
   & a {
     color: currentColor;
