@@ -31,6 +31,7 @@ export default {
     '~/components',
     '~/components/Blog',
     '~/components/Forms',
+    '~/components/Forms/FormsComponents',
     '~/components/Layout',
     '~/components/Shared',
   ],

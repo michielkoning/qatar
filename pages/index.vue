@@ -1,7 +1,3 @@
 <template>
-  <div class="container">Home</div>
+  <center-wrapper>Home</center-wrapper>
 </template>
-
-<script>
-export default {}
-</script>
