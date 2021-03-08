@@ -1,7 +1,7 @@
 <template>
-  <footer class="footer">
+  <footer :class="$style.footer">
     <center-wrapper>
-      <div class="wrapper">
+      <div :class="$style.wrapper">
         <social-media-links
           title="Volg ons op"
           facebook="#"
@@ -12,7 +12,7 @@
         />
         <nav>
           <h2>Handige links</h2>
-          <ol class="list">
+          <ol :class="$style.list">
             <li><nuxt-link to="/">Home</nuxt-link></li>
             <li><nuxt-link to="/petitie">Petitie</nuxt-link></li>
             <li><nuxt-link to="/nieuws">Nieuws</nuxt-link></li>
@@ -25,10 +25,10 @@
   </footer>
 </template>
 
-<style scoped lang="postcss">
+<style module lang="postcss">
 .footer {
-  background: var(--color-primary);
-  color: var(--color-white);
+  @mixin color-negative;
+
   padding: 2em 0;
 
   & a {
