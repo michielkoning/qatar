@@ -26,6 +26,15 @@
 </template>
 
 <style scoped lang="postcss">
+.footer {
+  background: var(--color-primary);
+  color: var(--color-white);
+
+  & a {
+    color: currentColor;
+  }
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));

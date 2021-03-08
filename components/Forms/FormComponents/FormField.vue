@@ -27,11 +27,3 @@ export default {
   },
 }
 </script>
-
-<i18n>
-{
-  "nl": {
-    "email": "test"
-  }
-}
-</i18n>
