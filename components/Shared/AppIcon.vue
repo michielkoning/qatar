@@ -1,5 +1,11 @@
 <template>
-  <svg-icon :name="icon" :class="$style.icon" width="24" height="24" />
+  <svg-icon
+    :name="icon"
+    :class="$style.icon"
+    width="24"
+    height="24"
+    aria-hidden="true"
+  />
 </template>
 
 <script>
