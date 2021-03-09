@@ -1,5 +1,5 @@
 <template>
-  <center-wrapper>
+  <center-wrapper size="sm">
     <form-petition />
   </center-wrapper>
 </template>

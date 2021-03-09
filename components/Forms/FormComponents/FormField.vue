@@ -27,3 +27,12 @@ export default {
   },
 }
 </script>
+
+<style scoped lang="postcss">
+.label {
+  display: block;
+  margin-bottom: var(--spacing-xxs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+</style>

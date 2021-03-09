@@ -40,4 +40,8 @@ export default {
 .wrapper-md {
   max-width: var(--container-width-md);
 }
+
+.wrapper-sm {
+  max-width: var(--container-width-sm);
+}
 </style>
