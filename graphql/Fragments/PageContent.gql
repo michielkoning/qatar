@@ -1,13 +1,6 @@
-#import "./ImageHero.gql"
-
 fragment pageContent on Page {
   title
   content
-  featuredImage {
-    node {
-      ...imageHero
-    }
-  }
   seo {
     focuskw
     metaDesc
@@ -16,13 +9,13 @@ fragment pageContent on Page {
     metaRobotsNoindex
     opengraphDescription
     opengraphImage {
-      archive: sourceUrl(size: ARCHIVE)
+      archive: sourceUrl(size: MEDIUM)
     }
     opengraphTitle
     title
     twitterDescription
     twitterImage {
-      archive: sourceUrl(size: ARCHIVE)
+      archive: sourceUrl(size: MEDIUM)
     }
     twitterTitle
   }

@@ -1,6 +1,6 @@
 <template>
-  <fieldset>
-    <legend>{{ title }}</legend>
+  <fieldset class="fieldset">
+    <legend class="sr-only">{{ title }}</legend>
     <div class="fields">
       <slot />
     </div>
@@ -20,8 +20,15 @@ export default {
 
 <style lang="postcss" scoped>
 .fields {
+  margin: 0;
+  border: 0;
   display: grid;
   grid-gap: var(--gutter);
   margin-bottom: var(--gutter);
+}
+
+.fieldset {
+  border: 0;
+  padding: 0;
 }
 </style>

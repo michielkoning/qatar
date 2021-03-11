@@ -1,63 +1,89 @@
 <template>
-  <clickable-list-item :url="url" class="list-item">
-    <archive-wrapper :image="post.featuredImage">
-      <template #title>
-        <!-- eslint-disable-next-line -->
-        <router-link :to="url" v-html="post.title" class="link" />
-      </template>
-      <div class="meta">
-        <post-date :date="post.date" />
-      </div>
-      <!-- eslint-disable-next-line -->
-      <div v-html="post.excerpt" />
-
-      <read-more-link aria-hidden="true" class="read-more" />
-    </archive-wrapper>
-  </clickable-list-item>
+  <li @mousedown.left="mouseDown" @mouseup.left="mouseUp">
+    <!-- eslint-disable-next-line -->
+    <h2><router-link :to="post.slug" v-html="post.title" /></h2>
+    <app-date :date="post.date" />
+    <!-- eslint-disable-next-line -->
+    <div class="text" v-html="post.excerpt"/>
+    <div class="link-wrapper">
+      <span class="read-more">
+        {{ $t('readMore') }}
+        <app-icon icon="chevron-right" />
+      </span>
+    </div>
+  </li>
 </template>
 
 <script>
-import PostDate from '~/components/Blog/PostDate.vue'
-import ArchiveWrapper from '~/components/Layout/ArchiveWrapper.vue'
-import ClickableListItem from '~/components/Shared/ClickableListItem.vue'
-import ReadMoreLink from '~/components/Shared/ReadMoreLink.vue'
-
 export default {
-  components: {
-    PostDate,
-    ArchiveWrapper,
-    ClickableListItem,
-    ReadMoreLink,
-  },
   props: {
     post: {
       type: Object,
       required: true,
     },
   },
-  computed: {
-    url() {
-      return `/${this.post.slug}/`
+  data() {
+    return {
+      down: null,
+    }
+  },
+  methods: {
+    mouseUp() {
+      const up = +new Date()
+      if (up - this.down < 200) {
+        this.goToPost()
+      }
+    },
+    mouseDown() {
+      this.down = +new Date()
+    },
+    goToPost() {
+      this.$router.push(this.post.slug)
     },
   },
 }
 </script>
 
 <style lang="postcss" scoped>
-.item {
+li {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--spacing-m);
+  border-bottom: 2px dashed var(--color-white);
   cursor: pointer;
-  background: linear-gradient(
-    to bottom,
-    var(--color-gray-lighter) 0,
-    var(--color-white) 20rem
-  );
+
+  &:hover .read-more,
+  &:focus-within .read-more {
+    box-shadow: 0 3px 0 0 var(--color-primary);
+
+    & svg {
+      margin-left: var(--spacing-xxs);
+    }
+  }
 }
 
-.link {
+a {
   @mixin link-reset;
 }
 
-.social {
-  font-size: 0.9em;
+.image {
+  width: 100%;
+  height: 8em;
+  object-fit: cover;
+  order: -2;
+  margin-bottom: var(--spacing-xs);
+}
+
+time {
+  order: -1;
+  font-size: var(--font-size-sm);
+}
+
+.text {
+  @mixin text-overflow;
+}
+
+.link-wrapper {
+  margin-top: auto;
 }
 </style>

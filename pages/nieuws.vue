@@ -1,15 +1,23 @@
 <template>
-  <div class="container">
-    Nieuws
-    <posts />
+  <div>
+    <h1>{{ page.title }}</h1>
+    <latest-posts />
   </div>
 </template>
 
 <script>
+import PageQuery from '~/graphql/Page.gql'
+
 export default {
-  data() {
+  async asyncData({ app }) {
+    const page = await app.apolloProvider.defaultClient.query({
+      query: PageQuery,
+      variables: {
+        pageId: 18,
+      },
+    })
     return {
-      news: {},
+      page: page.data.page,
     }
   },
 }

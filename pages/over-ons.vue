@@ -1,5 +1,5 @@
 <template>
-  <app-page v-if="page" :page="page" />
+  <app-page :page="page" />
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
     const page = await app.apolloProvider.defaultClient.query({
       query: PageQuery,
       variables: {
-        pageId: 502,
+        pageId: 7,
       },
     })
     return {

@@ -1,0 +1,13 @@
+#import "./Fragments/PageContent.gql"
+
+query GET_HOMEPAGE($pageId: ID!) {
+  page(id: $pageId, idType: DATABASE_ID) {
+    ...pageContent
+    argumentsGroup {
+      arguments {
+        text
+        title
+      }
+    }
+  }
+}

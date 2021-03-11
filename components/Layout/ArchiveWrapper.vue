@@ -1,20 +1,16 @@
 <template>
-  <div class="archive-bg">
-    <center-wrapper>
-      <div class="wrapper">
-        <div v-if="image" class="image-wrapper">
-          <image-archive :image="image" />
-        </div>
+  <div class="wrapper">
+    <div v-if="image" class="image-wrapper">
+      <image-archive :image="image" />
+    </div>
 
-        <div class="text">
-          <h2 class="title">
-            <slot name="title" />
-          </h2>
+    <div class="text">
+      <h2 class="title">
+        <slot name="title" />
+      </h2>
 
-          <slot />
-        </div>
-      </div>
-    </center-wrapper>
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -35,15 +31,8 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.archive-bg {
-  background: linear-gradient(
-    to bottom,
-    var(--color-gray-lighter) 0,
-    var(--color-white) 20rem
-  );
-}
-
 .wrapper {
+  margin-bottom: 2em;
   @media (--viewport-sm) {
     display: flex;
   }

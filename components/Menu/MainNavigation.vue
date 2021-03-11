@@ -5,27 +5,27 @@
     </h2>
     <ul ref="menu">
       <li>
-        <nuxt-link to="/">
+        <nuxt-link to="/" @click.native="changePage">
           <span class="title">Home</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/petitie">
+        <nuxt-link to="/petitie" @click.native="changePage">
           <span class="title">Petitie</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/nieuws">
+        <nuxt-link to="/nieuws" @click.native="changePage">
           <span class="title">Nieuws</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/achtergrond">
+        <nuxt-link to="/achtergrond" @click.native="changePage">
           <span class="title"> Achtergrond</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/over-ons">
+        <nuxt-link to="/over-ons" @click.native="changePage">
           <span class="title">Over ons</span>
         </nuxt-link>
       </li>
@@ -118,17 +118,16 @@ a {
   border-bottom: 1px dashed var(--color-gray);
 
   &.nuxt-link-exact-active .title {
-    box-shadow: 0 2px 0 0 var(--color-primary);
+    box-shadow: 0 3px 0 0 var(--color-primary);
   }
 
   &:focus {
     outline: none;
   }
 
-  &:focus,
   &:hover {
     & .title {
-      box-shadow: 0 3px 0 0 var(--color-primary);
+      box-shadow: 0 2px 0 0 var(--color-primary);
     }
   }
 

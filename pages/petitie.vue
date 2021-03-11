@@ -1,6 +1,23 @@
 <template>
-  <center-wrapper size="sm">
-    <h1>ja ik wil dat Nederlands Elftal niet naar Qatar gaat</h1>
+  <app-page :page="page">
     <form-petition />
-  </center-wrapper>
+  </app-page>
 </template>
+
+<script>
+import PageQuery from '~/graphql/Page.gql'
+
+export default {
+  async asyncData({ app }) {
+    const page = await app.apolloProvider.defaultClient.query({
+      query: PageQuery,
+      variables: {
+        pageId: 15,
+      },
+    })
+    return {
+      page: page.data.page,
+    }
+  },
+}
+</script>

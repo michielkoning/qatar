@@ -10,7 +10,7 @@ export default {
     const page = await app.apolloProvider.defaultClient.query({
       query: PageQuery,
       variables: {
-        pageId: 2298,
+        pageId: 9,
       },
     })
     return {

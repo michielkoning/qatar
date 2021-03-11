@@ -44,6 +44,8 @@ a {
 }
 
 .btn {
+  @mixin link-reset;
+
   text-align: center;
   font-weight: var(--font-weight-bold);
   border-radius: var(--spacing-xxs);

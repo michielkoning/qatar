@@ -21,7 +21,7 @@ export default {
     clientConfigs: {
       default: {
         // required
-        httpEndpoint: `https://api.haarlembijdeles.nl/graphql`,
+        httpEndpoint: `https://api.cancelqatar.nl/graphql`,
       },
     },
   },
@@ -34,11 +34,21 @@ export default {
     '~/components/Forms/FormComponents',
     '~/components/Layout',
     '~/components/Shared',
+    '~/components/Menu',
   ],
   i18n: {
     defaultLocale: 'nl',
     lazy: true,
-
+    seo: true,
+    langDir: 'locales/',
+    locales: [
+      {
+        name: 'Nederlands',
+        code: 'nl',
+        iso: 'nl-NL',
+        file: 'nl.json',
+      },
+    ],
     vueI18nLoader: true,
     vueI18n: {
       dateTimeFormats: {
@@ -60,6 +70,7 @@ export default {
       },
     },
   },
+
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint

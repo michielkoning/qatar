@@ -48,9 +48,9 @@ export default {
 <style scoped lang="postcss">
 .input {
   appearance: none;
-  border: 1px solid var(--color-gray);
-  background: var(--color-white);
-  border-radius: 0.25em;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  background: var(--color-secondary);
   width: 100%;
   height: auto;
   padding: 0.5rem 0.75rem;
@@ -69,7 +69,7 @@ export default {
   }
 
   &:focus {
-    border-color: var(--color-black);
+    border-color: var(--color-gray-light);
     outline: none;
   }
 

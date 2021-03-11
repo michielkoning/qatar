@@ -16,7 +16,7 @@
               <router-link to="/">Cancel Qatar</router-link>
             </h1>
             <main-navigation />
-            <social-media-links />
+            <social-media-links facebook="/" />
           </div>
         </transition>
       </div>

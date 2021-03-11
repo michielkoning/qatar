@@ -1,6 +1,7 @@
+#import "./Fragments/Post.gql"
 #import "./Fragments/ImageArchive.gql"
 
-query GET_POSTS($first: Int, $after: String, $notIn: [ID]) {
+query Posts($first: Int, $after: String, $notIn: [ID]) {
   posts(first: $first, after: $after, where: { notIn: $notIn }) {
     pageInfo {
       hasNextPage
@@ -10,17 +11,15 @@ query GET_POSTS($first: Int, $after: String, $notIn: [ID]) {
     }
     edges {
       node {
-        title
+        ...post
+        id
+        slug
         excerpt
         featuredImage {
           node {
             ...imageArchive
           }
         }
-        databaseId
-        title
-        date
-        slug
       }
     }
   }

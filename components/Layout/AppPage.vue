@@ -1,10 +1,9 @@
 <template>
-  <center-wrapper v-if="page">
-    <article class="article">
-      <h1>{{ page.title }}</h1>
-      <div v-html="page.content" />
-    </article>
-  </center-wrapper>
+  <article class="article">
+    <h1>{{ page.title }}</h1>
+    <div v-html="page.content" />
+    <slot />
+  </article>
 </template>
 
 <script>
@@ -17,3 +16,10 @@ export default {
   },
 }
 </script>
+
+<style lang="postcss" scoped>
+.article {
+  max-width: 30em;
+  margin-bottom: 3em;
+}
+</style>

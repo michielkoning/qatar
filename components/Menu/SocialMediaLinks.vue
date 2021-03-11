@@ -1,106 +1,55 @@
 <template>
-  <div>
-    <h2>{{ title }}</h2>
-    <ul :class="$style.list">
-      <li v-if="facebook">
-        <a :href="facebook" :class="$style.link" rel="noopener" target="_blank">
-          <app-icon icon="facebook" />
-          <span class="sr-only">
-            {{ title }}
-            <span lang="en">Facebook</span>
-          </span>
-        </a>
-      </li>
-      <li v-if="twitter">
-        <a :href="twitter" :class="$style.link" rel="noopener" target="_blank">
+  <nav aria-labelledby="social-links-title">
+    <h2 id="social-links-title" class="sr-only">
+      {{ $t('socialMediaLinks') }}
+    </h2>
+    <ul class="social-links">
+      <li>
+        <a
+          href="https://twitter.com/CancelQatar2022"
+          rel="noopener"
+          target="_blank"
+        >
           <app-icon icon="twitter" />
           <span class="sr-only">
-            {{ title }}
-            <span lang="en">Twitter</span>
+            {{ $t('viewOn', { title: 'Nordgarden', network: 'Twitter' }) }}
           </span>
         </a>
       </li>
-      <li v-if="linkedin">
-        <a :href="linkedin" :class="$style.link" rel="noopener" target="_blank">
+      <li>
+        <a rel="noopener" target="_blank">
+          <app-icon icon="facebook" />
+          <span class="sr-only">
+            {{ $t('viewOn', { title: 'Nordgarden', network: 'FaceBook' }) }}
+          </span>
+        </a>
+      </li>
+
+      <li>
+        <a rel="noopener" target="_blank">
           <app-icon icon="linkedin" />
           <span class="sr-only">
-            {{ title }}
-            <span lang="en">LinkedIn</span>
-          </span>
-        </a>
-      </li>
-      <li v-if="pinterest">
-        <a
-          :href="pinterest"
-          :class="$style.link"
-          rel="noopener"
-          target="_blank"
-        >
-          <app-icon icon="pinterest" />
-          <span class="sr-only">
-            {{ title }}
-            <span lang="en">Pinterest</span>
-          </span>
-        </a>
-      </li>
-      <li v-if="instagram">
-        <a
-          :href="instagram"
-          :class="$style.link"
-          rel="noopener"
-          target="_blank"
-        >
-          <app-icon icon="instagram" />
-          <span class="sr-only">
-            {{ title }}
-            <span lang="en">Instagram</span>
+            {{ $t('viewOn', { title: 'Nordgarden', network: 'LinkedIn' }) }}
           </span>
         </a>
       </li>
     </ul>
-  </div>
+  </nav>
 </template>
 
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    facebook: {
-      type: String,
-      default: null,
-    },
-    twitter: {
-      type: String,
-      default: null,
-    },
-    pinterest: {
-      type: String,
-      default: null,
-    },
-    instagram: {
-      type: String,
-      default: null,
-    },
-    linkedin: {
-      type: String,
-      default: null,
-    },
-  },
-}
-</script>
-
-<style lang="postcss" module>
-.list {
+<style lang="postcss" scoped>
+ul {
   @mixin list-reset;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(2.25em, 1fr));
+  display: flex;
+  margin-bottom: var(--spacing-m);
 }
 
-.link {
+a {
   @mixin link-reset;
+
+  display: block;
+  font-size: 1.5em;
+  margin-right: 0.75em;
 }
 </style>

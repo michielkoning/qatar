@@ -7,6 +7,7 @@
           class="btn"
           @click="toggleMenu(!menuIsExpanded)"
         >
+          <app-icon icon="bars" />
           {{ $t('menu') }}
         </button>
       </div>
@@ -15,11 +16,16 @@
 </template>
 
 <script>
+import EventBusUtil from '~/utils/eventBusUtil'
+
 export default {
   data() {
     return {
       menuIsExpanded: false,
     }
+  },
+  mounted() {
+    EventBusUtil.$on('header-close-mobile-menu', () => this.toggleMenu(false))
   },
   methods: {
     toggleMenu(status) {

@@ -1,0 +1,22 @@
+{
+  "albums": "Albums",
+  "biography": "Biography",
+  "close": "Sluiten",
+  "gallery": "Gallery",
+  "home": "Home",
+  "latestPosts": "Laatste berichten",
+  "loadMore": "Laad meer berichten",
+  "loading": "Aan het laden",
+  "mainNavigation": "Hoofdnavigatie",
+  "menu": "Menu",
+  "next": "Next",
+  "pause": "Pause",
+  "play": "Play",
+  "readFullBiography": "Read the full biography",
+  "readMore": "Lees verder",
+  "socialMediaLinks": "Social media links",
+  "tour": "Tour",
+  "videos": "Videos",
+  "viewOn": "Bekijk %{title} op %{network}",
+  "visitOn": "Bezoek %{title} op %{network}"
+}
