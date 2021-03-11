@@ -1,4 +1,0 @@
-@define-mixin heading {
-  font-family: var(--font-family-headings);
-  font-weight: var(--font-weight-bold);
-}

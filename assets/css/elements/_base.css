@@ -1,8 +1,6 @@
-@import './accessibility.css';
-@import './images.css';
-@import './links.css';
 @import './typography.css';
-@import './scaffolding.css';
-@import './forms.css';
-@import './list.css';
+@import './images.css';
+@import './lists.css';
 @import './buttons.css';
+@import './video.css';
+@import './icons.css';

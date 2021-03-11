@@ -27,9 +27,6 @@
 
 <style module lang="postcss">
 .footer {
-  @mixin color-negative;
-
-  padding: 2em 0;
 
   & a {
     color: currentColor;
