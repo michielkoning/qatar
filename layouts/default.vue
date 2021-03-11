@@ -1,22 +1,31 @@
 <template>
   <div class="page">
-    <the-header />
+    <the-header class="header" />
     <main class="main">
       <nuxt />
     </main>
-    <the-footer />
   </div>
 </template>
 
 <style scoped lang="postcss">
 .page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: grid;
+  grid-gap: 1em;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  overflow: hidden;
+  z-index: var(--main-navigation);
 }
 
 .main {
-  flex: 1 0 auto;
-  padding-bottom: 2em;
+  margin-left: var(--width-navigation-left);
+  padding-top: var(--gutter);
 }
 </style>

@@ -1,7 +1,8 @@
 :root {
   --color-primary: #010101;
-  --color-black: #000;
   --color-white: #b3b3b3;
+  --color-black: var(--color-primary);
+  --text-color: var(--color-primary);
   --color-gray-darker: #41494c;
   --color-gray-dark: #728186;
   --color-gray: #a3b8c0;
@@ -10,10 +11,9 @@
   --color-gray-lightest: #f1f4f5;
 }
 
-/*
 @media (--dark-mode) {
   :root {
-    --color-black: #fff;
-    --color-white: #000;
+    --color-primary: #b3b3b3;
+    --color-white: #010101;
   }
-} */
+}

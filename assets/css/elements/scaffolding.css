@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background: var(--color-gray-lightest);
+  background: var(--color-white);
 }
 
 ::selection {
