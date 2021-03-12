@@ -23,8 +23,8 @@ export default {
   margin: 0;
   border: 0;
   display: grid;
-  grid-gap: var(--gutter);
-  margin-bottom: var(--gutter);
+  grid-gap: 1em;
+  margin-bottom: 1.5em;
 }
 
 .fieldset {
