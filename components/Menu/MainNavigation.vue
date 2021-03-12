@@ -115,7 +115,7 @@ a {
   font-size: var(--font-size-lg);
   line-height: 1.1;
   padding: 0.45em 0;
-  border-bottom: 1px dashed var(--color-gray);
+  border-bottom: 1px dashed var(--color-black);
 
   &.nuxt-link-exact-active .title {
     box-shadow: 0 3px 0 0 var(--color-primary);

@@ -15,6 +15,7 @@
 
 <script>
 import HomeQuery from '~/graphql/Home.gql'
+import getSeoMetaData from '~/utils/seo'
 
 export default {
   async asyncData({ app }) {
@@ -27,6 +28,9 @@ export default {
     return {
       page: page.data.page,
     }
+  },
+  head() {
+    return getSeoMetaData(this.page, this.$nuxt.$route)
   },
 }
 </script>

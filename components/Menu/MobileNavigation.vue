@@ -44,7 +44,7 @@ export default {
   right: 0;
   background: var(--color-secondary);
   z-index: var(--mobile-navigation);
-  border-bottom: 2px solid var(--color-white);
+  border-bottom: 2px solid var(--color-black);
 
   @media (--navigation-position-left) {
     display: none;

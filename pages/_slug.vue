@@ -11,6 +11,7 @@
 <script>
 import PostQuery from '~/graphql/Post.gql'
 import PostsQuery from '~/graphql/Posts.gql'
+import getSeoMetaData from '~/utils/seo'
 
 export default {
   async asyncData({ app, params }) {
@@ -31,6 +32,9 @@ export default {
       post: post.data.post,
       posts: posts.data.posts,
     }
+  },
+  head() {
+    return getSeoMetaData(this.post, this.$nuxt.$route)
   },
 }
 </script>
