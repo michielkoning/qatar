@@ -3,13 +3,14 @@
     <app-page :page="post" />
     <section id="posts-title">
       <h1 id="posts-title" class="posts-title-wrapper">Meer berichten</h1>
-      <latest-posts :not-in="post.databaseId" />
+      <latest-posts :posts="posts.edges" />
     </section>
   </div>
 </template>
 
 <script>
 import PostQuery from '~/graphql/Post.gql'
+import PostsQuery from '~/graphql/Posts.gql'
 
 export default {
   async asyncData({ app, params }) {
@@ -19,9 +20,16 @@ export default {
         uri: params.slug,
       },
     })
+    const posts = await app.apolloProvider.defaultClient.query({
+      query: PostsQuery,
+      variables: {
+        notIn: post.data.post.databaseId,
+      },
+    })
 
     return {
       post: post.data.post,
+      posts: posts.data.posts,
     }
   },
 }
