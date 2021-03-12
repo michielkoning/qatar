@@ -19,7 +19,9 @@ export default {
 
 <style lang="postcss" scoped>
 .article {
-  max-width: 30em;
   margin-bottom: 3em;
+  @media (--navigation-position-left) {
+    max-width: 30em;
+  }
 }
 </style>
