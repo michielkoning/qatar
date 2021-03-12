@@ -58,7 +58,7 @@ export default (page, path) => {
       {
         hid: 'og:site_name',
         name: 'og:site_name',
-        content: 'Haarlem bijdeles',
+        content: 'Cancel Qatar',
       },
       {
         name: 'og:url',

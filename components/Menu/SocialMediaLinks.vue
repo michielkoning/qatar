@@ -12,7 +12,7 @@
         >
           <app-icon icon="twitter" />
           <span class="sr-only">
-            {{ $t('viewOn', { title: 'Nordgarden', network: 'Twitter' }) }}
+            {{ $t('viewOn', { title: 'Cancel Qatar', network: 'Twitter' }) }}
           </span>
         </a>
       </li>
@@ -20,7 +20,7 @@
         <a rel="noopener" target="_blank">
           <app-icon icon="facebook" />
           <span class="sr-only">
-            {{ $t('viewOn', { title: 'Nordgarden', network: 'FaceBook' }) }}
+            {{ $t('viewOn', { title: 'Cancel Qatar', network: 'Facebook' }) }}
           </span>
         </a>
       </li>
@@ -29,7 +29,7 @@
         <a rel="noopener" target="_blank">
           <app-icon icon="linkedin" />
           <span class="sr-only">
-            {{ $t('viewOn', { title: 'Nordgarden', network: 'LinkedIn' }) }}
+            {{ $t('viewOn', { title: 'Cancel Qatar', network: 'LinkedIn' }) }}
           </span>
         </a>
       </li>

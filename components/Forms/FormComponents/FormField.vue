@@ -2,7 +2,7 @@
   <div class="field">
     <label :for="id" class="label">{{ title }}</label>
     <slot />
-    <span aria-live="assertive">{{ errorMessage }}</span>
+    <error-message :error-message="errorMessage" />
   </div>
 </template>
 
@@ -17,13 +17,10 @@ export default {
       type: String,
       required: true,
     },
-    errors: {
-      type: Array,
-      default: () => [],
+    errorMessage: {
+      type: String,
+      default: '',
     },
-  },
-  data() {
-    return { errorMessage: '' }
   },
 }
 </script>

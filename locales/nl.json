@@ -1,22 +1,32 @@
 {
-  "albums": "Albums",
-  "biography": "Biography",
   "close": "Sluiten",
-  "gallery": "Gallery",
+  "form": {
+    "botField": "Vul dit niet in als je mens bent",
+    "email": "E-mailadres",
+    "error": {
+      "email": {
+        "email": "Vul een geldige e-mailadres in."
+      },
+      "general": {
+        "invalid": "Niet alle velden zijn correct ingevuld.",
+        "motivationEmpty": "Je hebt nog geen motivatie ingevuld.",
+        "required": "Vul je {field} in.",
+        "selectDateEmpty": "Je hebt nog geen datum geselecteerd.",
+        "submitError": "Er ging iets mis bij het posten."
+      },
+      "name": {
+        "isNumeric": "Vul een geldige voornaam in."
+      }
+    }
+  },
   "home": "Home",
   "latestPosts": "Laatste berichten",
   "loadMore": "Laad meer berichten",
   "loading": "Aan het laden",
   "mainNavigation": "Hoofdnavigatie",
   "menu": "Menu",
-  "next": "Next",
-  "pause": "Pause",
-  "play": "Play",
-  "readFullBiography": "Read the full biography",
   "readMore": "Lees verder",
   "socialMediaLinks": "Social media links",
-  "tour": "Tour",
-  "videos": "Videos",
   "viewOn": "Bekijk %{title} op %{network}",
   "visitOn": "Bezoek %{title} op %{network}"
 }
