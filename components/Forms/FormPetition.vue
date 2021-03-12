@@ -59,6 +59,9 @@ export default {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' },
       }
       try {
+        if (!this.form.name || !this.form.email) {
+          return
+        }
         await this.$axios.$post(
           '/',
           this.encodeFormData({
