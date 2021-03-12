@@ -15,14 +15,27 @@
       <input type="hidden" name="form-name" value="petition" />
       <form-fieldset title="Petitie">
         <form-field
-          id="name"
-          :error-message="errorMessageName"
-          :title="$t('form.name')"
+          id="firstName"
+          :error-message="errorMessageFirstName"
+          :title="$t('form.firstName')"
         >
           <input
-            id="name"
-            v-model.trim.lazy="$v.form.name.$model"
-            name="name"
+            id="firstName"
+            v-model.trim.lazy="$v.form.firstName.$model"
+            name="firstName"
+            type="text"
+            maxlength="255"
+          />
+        </form-field>
+        <form-field
+          id="lastName"
+          :error-message="errorMessageLastName"
+          :title="$t('form.lastName')"
+        >
+          <input
+            id="lastName"
+            v-model.trim.lazy="$v.form.lastName.$model"
+            name="lastName"
             type="text"
             maxlength="255"
           />
@@ -41,13 +54,7 @@
           />
         </form-field>
       </form-fieldset>
-      <form-input-text
-        id="bot-field"
-        v-model="form.botField"
-        title="Vul dit niet in als je mens bent"
-        :class="$style['bot-field']"
-        name="bot-field"
-      />
+      <p v-if="errorMessageForm">{{ errorMessageForm }}</p>
       <app-button type="submit">Verzenden</app-button>
     </form>
   </div>
@@ -59,16 +66,20 @@ export default {
   data() {
     return {
       submitted: false,
+      errorMessageForm: null,
       form: {
-        name: '',
-        email: '',
-        botField: '',
+        firstName: 'Michiel',
+        lastName: 'Koning',
+        email: 'test3@michielkoning.nl',
       },
     }
   },
   validations: {
     form: {
-      name: {
+      firstName: {
+        required,
+      },
+      lastName: {
         required,
       },
       email: {
@@ -78,11 +89,21 @@ export default {
     },
   },
   computed: {
-    errorMessageName() {
-      if (this.$v.form.name.$anyError) {
-        if (!this.$v.form.name.required) {
+    errorMessageFirstName() {
+      if (this.$v.form.firstName.$anyError) {
+        if (!this.$v.form.firstName.required) {
           return this.$t('form.error.general.required', {
-            field: this.$t('form.name').toLowerCase(),
+            field: this.$t('form.firstName').toLowerCase(),
+          })
+        }
+      }
+      return null
+    },
+    errorMessageLastName() {
+      if (this.$v.form.lastName.$anyError) {
+        if (!this.$v.form.lastName.required) {
+          return this.$t('form.error.general.required', {
+            field: this.$t('form.lastName').toLowerCase(),
           })
         }
       }
@@ -102,34 +123,39 @@ export default {
     },
   },
   methods: {
-    encodeFormData(data) {
-      return Object.keys(data)
-        .map(
-          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join('&')
-    },
     validate() {
       this.$v.$touch()
       return !this.$v.$invalid
     },
     async submit() {
-      this.errorMessageForm = ''
+      this.errorMessageForm = null
       if (this.validate()) {
         const axiosConfig = {
-          header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            'api-key': process.env.NUXT_ENV_SENDINBLUE_API_KEY,
+          },
         }
         try {
           await this.$axios.$post(
-            '/',
-            this.encodeFormData({
-              'form-name': 'contact',
-              ...this.form,
-            }),
+            'https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation/',
+            {
+              email: this.form.email,
+              attributes: {
+                FIRSTNAME: this.form.firstName,
+                LASTNAME: this.form.lastName,
+              },
+              includeListIds: [4],
+              templateId: 2,
+              redirectionUrl: 'https://cancelqatar.netlify.app/bedankt',
+            },
             axiosConfig
           )
           this.submitted = true
-        } catch (error) {}
+        } catch (error) {
+          this.errorMessageForm = error
+        }
       }
     },
   },
