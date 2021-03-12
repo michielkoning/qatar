@@ -2,6 +2,7 @@
   <form-field :id="id" :errors="errors" :title="title" class="field">
     <input
       :id="id"
+      :name="id"
       v-bind="$attrs"
       :value="value"
       :type="type"
