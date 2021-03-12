@@ -20,7 +20,7 @@
     "core-js": "^3.8.3",
     "graphql-tag": "^2.11.0",
     "nuxt": "^2.15.2",
-    "nuxt-i18n": "^6.20.6",
+    "nuxt-i18n": "^6.21.0",
     "vuelidate": "^0.7.6"
   },
   "devDependencies": {
