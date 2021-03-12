@@ -3,16 +3,7 @@
     <p v-if="submitted">
       Het formulier is verzonden. We nemen zo spoedig mogelijk contact met u op.
     </p>
-    <form
-      v-else
-      action
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      method="post"
-      name="petition"
-      @submit.prevent="submit"
-    >
-      <input type="hidden" name="form-name" value="petition" />
+    <form v-else action method="post" @submit.prevent="submit">
       <form-fieldset title="Petitie">
         <form-field
           id="firstName"
