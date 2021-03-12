@@ -13,7 +13,7 @@ query Posts($first: Int, $after: String, $notIn: [ID]) {
       node {
         ...post
         id
-        slug
+        uri
         excerpt
         featuredImage {
           node {

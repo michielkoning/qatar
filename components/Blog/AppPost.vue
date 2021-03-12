@@ -1,7 +1,7 @@
 <template>
   <li @mousedown.left="mouseDown" @mouseup.left="mouseUp">
     <!-- eslint-disable-next-line -->
-    <h2><router-link :to="post.slug" v-html="post.title" /></h2>
+    <h2><router-link :to="post.uri" v-html="post.title" /></h2>
     <app-date :date="post.date" />
     <!-- eslint-disable-next-line -->
     <div class="text" v-html="post.excerpt"/>
@@ -38,7 +38,7 @@ export default {
       this.down = +new Date()
     },
     goToPost() {
-      this.$router.push(this.post.slug)
+      this.$router.push(this.post.uri)
     },
   },
 }
