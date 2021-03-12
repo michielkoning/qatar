@@ -3,6 +3,7 @@
   "form": {
     "botField": "Vul dit niet in als je mens bent",
     "email": "E-mailadres",
+    "name": "Naam",
     "error": {
       "email": {
         "email": "Vul een geldige e-mailadres in."
@@ -13,9 +14,6 @@
         "required": "Vul je {field} in.",
         "selectDateEmpty": "Je hebt nog geen datum geselecteerd.",
         "submitError": "Er ging iets mis bij het posten."
-      },
-      "name": {
-        "isNumeric": "Vul een geldige voornaam in."
       }
     }
   },
