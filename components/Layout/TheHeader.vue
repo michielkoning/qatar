@@ -126,7 +126,7 @@ h1 {
 
   @media (--navigation-position-left) {
     background: transparent;
-    border-right: 2px solid #fff;
+    border-right: 2px solid var(--color-black);
     overflow: visible;
     display: flex !important;
     flex-direction: column;

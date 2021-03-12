@@ -16,14 +16,10 @@ html {
 }
 
 body {
-  background: var(--color-secondary);
+  background: var(--color-body-background);
   margin: 0;
 }
 
 p:empty {
   display: none;
-}
-
-h1 {
-  color: var(--color-primary);
 }

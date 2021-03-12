@@ -48,13 +48,12 @@ a {
 
   text-align: center;
   font-weight: var(--font-weight-bold);
-  border-radius: var(--spacing-xxs);
   display: block;
   text-decoration: none;
   padding: var(--spacing-xs) var(--spacing-xs);
   font-family: var(--font-family-headings);
   transition: background-color 0.1s ease-in-out;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-black);
   background: transparent;
   max-width: 20em;
   color: var(--text-color);

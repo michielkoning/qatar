@@ -49,7 +49,7 @@ li {
   display: flex;
   flex-direction: column;
   padding-bottom: var(--spacing-m);
-  border-bottom: 2px dashed var(--color-white);
+  border-bottom: 2px dashed var(--color-black);
   cursor: pointer;
 
   &:hover .read-more,

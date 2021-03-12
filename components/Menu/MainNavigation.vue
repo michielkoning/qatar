@@ -158,10 +158,10 @@ a {
       position: absolute;
       display: block;
       content: '';
-      margin-top: -3px;
-      border-top: calc(var(--spacing-s) + 3px) solid transparent;
-      border-bottom: calc(var(--spacing-s) + 3px) solid transparent;
-      border-left: calc(var(--spacing-m) + 6px) solid #fff;
+      margin-top: -2px;
+      border-top: calc(var(--spacing-s) + 2px) solid transparent;
+      border-bottom: calc(var(--spacing-s) + 2px) solid transparent;
+      border-left: calc(var(--spacing-m) + 4px) solid var(--color-black);
     }
   }
 }
