@@ -68,9 +68,9 @@ export default {
       submitted: false,
       errorMessageForm: null,
       form: {
-        firstName: 'Michiel',
-        lastName: 'Koning',
-        email: 'test3@michielkoning.nl',
+        firstName: '',
+        lastName: '',
+        email: '',
       },
     }
   },
