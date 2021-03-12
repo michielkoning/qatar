@@ -47,6 +47,13 @@ export default {
     }
   },
   methods: {
+    encodeFormData(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
+    },
     async submit() {
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' },
