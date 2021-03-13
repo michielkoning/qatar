@@ -1,22 +1,9 @@
+#import "./Seo.gql"
+
 fragment pageContent on Page {
   title
   content
   seo {
-    focuskw
-    metaDesc
-    metaKeywords
-    metaRobotsNofollow
-    metaRobotsNoindex
-    opengraphDescription
-    opengraphImage {
-      archive: sourceUrl(size: MEDIUM)
-    }
-    opengraphTitle
-    title
-    twitterDescription
-    twitterImage {
-      archive: sourceUrl(size: MEDIUM)
-    }
-    twitterTitle
+    ...seo
   }
 }
