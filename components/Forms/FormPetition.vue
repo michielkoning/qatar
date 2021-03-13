@@ -3,7 +3,7 @@
     <p v-if="submitted">
       Het formulier is verzonden. We nemen zo spoedig mogelijk contact met u op.
     </p>
-    <form v-else action method="post" @submit.prevent="submit">
+    <form v-else action method="post" novalidate @submit.prevent="submit">
       <form-fieldset title="Petitie">
         <form-field
           id="firstName"

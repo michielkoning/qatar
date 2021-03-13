@@ -22,5 +22,6 @@ ul {
   display: grid;
   grid-gap: var(--spacing-l);
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  margin-bottom: 3em;
 }
 </style>

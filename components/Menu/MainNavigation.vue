@@ -90,7 +90,7 @@ ul {
   @mixin list-reset;
 
   margin-bottom: var(--spacing-m);
-  border-top: 1px dashed var(--color-gray);
+  border-top: 1px dashed var(--color-black);
 
   @media (--navigation-position-left) {
     border-top: 0;

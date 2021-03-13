@@ -2,6 +2,7 @@ input[type='text'],
 input[type='email'] {
   appearance: none;
   color: var(--color-black);
+  border-radius: 0;
   border: 2px solid var(--color-black);
   background: var(--color-secondary);
   width: 100%;
@@ -10,7 +11,6 @@ input[type='email'] {
   font-size: 1rem;
   font-family: inherit;
   transition: border-color 0.15s ease-out;
-  transition: background-color 0.1s ease-out;
 
   &:disabled {
     background-color: var(--color-gray-lighterest);
