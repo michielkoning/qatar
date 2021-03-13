@@ -73,6 +73,7 @@ export default {
     lazy: true,
     seo: true,
     langDir: 'locales/',
+    baseUrl: 'https://cancelqatar.netlify.app',
     locales: [
       {
         name: 'Nederlands',
