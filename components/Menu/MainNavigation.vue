@@ -1,11 +1,11 @@
 <template>
   <nav aria-labelledby="menu-title">
-    <h2 id="menu-title" class="sr-only" tabindex="-1">
+    <h2 id="menu-title" class="sr-only">
       {{ $t('mainNavigation') }}
     </h2>
     <ul ref="menu">
       <li>
-        <nuxt-link to="/" @click.native="changePage">
+        <nuxt-link id="menu" to="/" @click.native="changePage">
           <span class="title">Home</span>
         </nuxt-link>
       </li>
@@ -119,10 +119,6 @@ a {
 
   &.nuxt-link-exact-active .title {
     box-shadow: 0 3px 0 0 var(--color-primary);
-  }
-
-  &:focus {
-    outline: none;
   }
 
   &:hover {

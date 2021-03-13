@@ -1,7 +1,8 @@
 <template>
   <center-wrapper>
+    <vue-announcer />
     <the-header />
-    <main class="main">
+    <main id="content" class="main">
       <nuxt />
     </main>
   </center-wrapper>

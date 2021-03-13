@@ -25,7 +25,10 @@ export default {
   css: ['~/assets/css/base.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/vuelidate'],
+  plugins: [
+    '~/plugins/vuelidate',
+    { src: '~/plugins/vue-announcer.js', mode: 'client' },
+  ],
   apollo: {
     clientConfigs: {
       default: {

@@ -23,7 +23,6 @@ input[type='email'] {
 
   &:focus {
     /* border-color: var(--color-gray-light); */
-    outline: none;
   }
 
   &:read-only {
