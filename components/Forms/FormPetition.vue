@@ -46,7 +46,7 @@
         </form-field>
       </form-fieldset>
       <p v-if="errorMessageForm">{{ errorMessageForm }}</p>
-      <app-button type="submit">Verzenden</app-button>
+      <app-button type="submit" :disabled="loading">Verzenden</app-button>
     </form>
   </div>
 </template>
@@ -57,6 +57,7 @@ export default {
   data() {
     return {
       submitted: false,
+      loading: false,
       errorMessageForm: null,
       form: {
         firstName: '',
@@ -120,15 +121,19 @@ export default {
     },
     async submit() {
       this.errorMessageForm = null
-      if (this.validate()) {
-        try {
-          await this.$axios.$post('https://subscribe.cancelqatar.nl', {
-            ...this.form,
-          })
-          this.submitted = true
-        } catch (error) {
-          this.errorMessageForm = error
-        }
+      if (!this.validate()) {
+        return
+      }
+      this.loading = true
+      try {
+        await this.$axios.$post('https://subscribe.cancelqatar.nl', {
+          ...this.form,
+        })
+        this.submitted = true
+      } catch (error) {
+        this.errorMessageForm = error
+      } finally {
+        this.loading = false
       }
     },
   },
