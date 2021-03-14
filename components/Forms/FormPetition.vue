@@ -46,7 +46,7 @@
         </form-field>
       </form-fieldset>
       <p v-if="errorMessageForm">{{ errorMessageForm }}</p>
-      <app-button type="submit" :disabled="loading">Verzenden</app-button>
+      <app-button type="submit">Verzenden</app-button>
     </form>
   </div>
 </template>
@@ -121,7 +121,11 @@ export default {
     },
     async submit() {
       this.errorMessageForm = null
+
       if (!this.validate()) {
+        return
+      }
+      if (this.loading) {
         return
       }
       this.loading = true
