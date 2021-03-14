@@ -121,28 +121,10 @@ export default {
     async submit() {
       this.errorMessageForm = null
       if (this.validate()) {
-        const axiosConfig = {
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-            'api-key': process.env.NUXT_ENV_SENDINBLUE_API_KEY,
-          },
-        }
         try {
-          await this.$axios.$post(
-            'https://api.sendinblue.com/v3/contacts/doubleOptinConfirmation/',
-            {
-              email: this.form.email,
-              attributes: {
-                FIRSTNAME: this.form.firstName,
-                LASTNAME: this.form.lastName,
-              },
-              includeListIds: [4],
-              templateId: 2,
-              redirectionUrl: 'https://cancelqatar.netlify.app/bedankt',
-            },
-            axiosConfig
-          )
+          await this.$axios.$post('https://subscribe.cancelqatar.nl', {
+            ...this.form,
+          })
           this.submitted = true
         } catch (error) {
           this.errorMessageForm = error
