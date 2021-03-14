@@ -39,6 +39,11 @@ export default {
         name: 'og:publisher',
         content: 'https://www.facebook.com/CancelWKQatar2022',
       },
+      {
+        hid: 'og:twitter:card',
+        name: 'og:twitter:card',
+        content: 'summary_large_image',
+      },
     ],
   },
 
