@@ -1,11 +1,13 @@
 // Global page headers: https://go.nuxtjs.dev/config-head
+import { title, facebook } from './../data/details'
+
 export default {
-  title: 'qatar',
+  title,
   meta: [
     {
       hid: 'og:publisher',
       name: 'og:publisher',
-      content: 'https://www.facebook.com/CancelWKQatar2022',
+      content: facebook,
     },
   ],
 }

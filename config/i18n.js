@@ -1,9 +1,11 @@
+import { baseUrl } from './../data/details'
+
 export default {
   defaultLocale: 'nl',
   lazy: true,
   seo: false,
   langDir: 'locales/',
-  baseUrl: 'https://cancelqatar.netlify.app',
+  baseUrl,
   locales: [
     {
       name: 'Nederlands',

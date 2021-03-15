@@ -13,10 +13,10 @@
         <transition name="fade">
           <div v-show="showMenu" ref="bg" class="content">
             <h1>
-              <router-link to="/">Cancel Qatar</router-link>
+              <router-link to="/">{{ title }}</router-link>
             </h1>
             <main-navigation />
-            <social-media-links facebook="/" />
+            <social-media-links />
           </div>
         </transition>
       </div>
@@ -26,19 +26,12 @@
 
 <script>
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
-import SkipLinks from '~/components/Menu/SkipLinks.vue'
-
-import MainNavigation from '~/components/Menu/MainNavigation.vue'
-import MobileNavigation from '~/components/Menu/MobileNavigation.vue'
+import { title } from '~/data/details'
 
 export default {
-  components: {
-    SkipLinks,
-    MainNavigation,
-    MobileNavigation,
-  },
   data() {
     return {
+      title,
       showMenu: false,
     }
   },

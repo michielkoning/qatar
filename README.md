@@ -1,4 +1,4 @@
-# qatar
+# cancel-qatar
 
 ## Build Setup
 

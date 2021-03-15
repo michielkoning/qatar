@@ -22,16 +22,9 @@
 </template>
 
 <script>
-import AppPost from '~/components/Blog/AppPost.vue'
 import PostsQuery from '~/graphql/Posts.gql'
-import AppButton from '~/components/Shared/AppButton.vue'
 
 export default {
-  components: {
-    AppButton,
-    AppPost,
-  },
-
   apollo: {
     // Pages
     posts: {

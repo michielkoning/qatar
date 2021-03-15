@@ -1,8 +1,9 @@
+import { apiUrl } from './../data/details'
 export default {
   clientConfigs: {
     default: {
       // required
-      httpEndpoint: `https://api.cancelqatar.nl/graphql`,
+      httpEndpoint: apiUrl,
     },
   },
 }

@@ -1,17 +1,19 @@
+import { title, categories, twitter, themeColor } from './../data/details'
+
 // PWA module configuration: https://go.nuxtjs.dev/pwa
 export default {
   manifest: {
     lang: 'nl',
-    name: 'Cancel Qatar',
-    shortName: 'Cancel Qatar',
-    categories: ['politics', 'sports'],
+    name: title,
+    shortName: title,
+    categories,
     orientation: 'portrait-primary',
   },
   meta: {
-    twitterSite: '@CancelQatar2022',
-    twitterCreator: '@CancelQatar2022',
+    twitterSite: twitter,
+    twitterCreator: twitter,
     twitterCard: 'summary_large_image',
-    theme_color: '#333',
+    theme_color: themeColor,
     mobileApp: true,
     mobileAppIOS: true,
     appleStatusBarStyle: 'black-translucent',
