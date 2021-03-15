@@ -71,7 +71,7 @@ export default {
   i18n: {
     defaultLocale: 'nl',
     lazy: true,
-    seo: true,
+    seo: false,
     langDir: 'locales/',
     baseUrl: 'https://cancelqatar.netlify.app',
     locales: [
@@ -90,14 +90,6 @@ export default {
             year: 'numeric',
             month: 'long',
             day: 'numeric',
-          },
-          long: {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric',
-            weekday: 'short',
-            hour: 'numeric',
-            minute: 'numeric',
           },
         },
       },

@@ -8,6 +8,14 @@
   </center-wrapper>
 </template>
 
+<script>
+export default {
+  head() {
+    return this.$nuxtI18nHead({ addSeoAttributes: true })
+  },
+}
+</script>
+
 <style scoped lang="postcss">
 .main {
   padding: 5em var(--gutter) 0;
