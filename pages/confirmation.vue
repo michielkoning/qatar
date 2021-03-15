@@ -13,5 +13,10 @@ export default {
       },
     }
   },
+  nuxtI18n: {
+    paths: {
+      nl: '/bedankt',
+    },
+  },
 }
 </script>

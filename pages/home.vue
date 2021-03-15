@@ -16,13 +16,14 @@
 <script>
 import HomeQuery from '~/graphql/Home.gql'
 import getSeoMetaData from '~/utils/seo'
+import { pageIdHome } from '~/data/pages'
 
 export default {
   async asyncData({ app }) {
     const page = await app.apolloProvider.defaultClient.query({
       query: HomeQuery,
       variables: {
-        pageId: 13,
+        pageId: pageIdHome,
       },
     })
     return {
@@ -31,6 +32,11 @@ export default {
   },
   head() {
     return getSeoMetaData(this.page.seo)
+  },
+  nuxtI18n: {
+    paths: {
+      nl: '/',
+    },
   },
 }
 </script>

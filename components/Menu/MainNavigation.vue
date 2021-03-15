@@ -5,27 +5,31 @@
     </h2>
     <ul ref="menu">
       <li>
-        <nuxt-link id="menu" to="/" @click.native="changePage">
+        <nuxt-link
+          id="menu"
+          :to="localePath('home')"
+          @click.native="changePage"
+        >
           <span class="title">Home</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/petitie" @click.native="changePage">
+        <nuxt-link :to="localePath('petition')" @click.native="changePage">
           <span class="title">Petitie</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/nieuws" @click.native="changePage">
+        <nuxt-link :to="localePath('news')" @click.native="changePage">
           <span class="title">Nieuws</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/achtergrond" @click.native="changePage">
+        <nuxt-link :to="localePath('background')" @click.native="changePage">
           <span class="title"> Achtergrond</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/over-ons" @click.native="changePage">
+        <nuxt-link :to="localePath('aboutUs')" @click.native="changePage">
           <span class="title">Over ons</span>
         </nuxt-link>
       </li>

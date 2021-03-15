@@ -36,5 +36,10 @@ export default {
   head() {
     return getSeoMetaData(this.post.seo)
   },
+  nuxtI18n: {
+    paths: {
+      nl: '/:slug',
+    },
+  },
 }
 </script>

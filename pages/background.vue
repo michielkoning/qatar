@@ -5,13 +5,14 @@
 <script>
 import PageQuery from '~/graphql/Page.gql'
 import getSeoMetaData from '~/utils/seo'
+import { pageIdBackground } from '~/data/pages'
 
 export default {
   async asyncData({ app }) {
     const page = await app.apolloProvider.defaultClient.query({
       query: PageQuery,
       variables: {
-        pageId: 9,
+        pageId: pageIdBackground,
       },
     })
     return {
@@ -20,6 +21,11 @@ export default {
   },
   head() {
     return getSeoMetaData(this.page.seo)
+  },
+  nuxtI18n: {
+    paths: {
+      nl: '/achtergrond',
+    },
   },
 }
 </script>
