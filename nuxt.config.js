@@ -1,154 +1,27 @@
+import apollo from './config/apollo'
+import axios from './config/axios'
+import build from './config/build'
+import buildModules from './config/buildModules'
+import components from './config/components'
+import css from './config/css'
+import head from './config/head'
+import i18n from './config/i18n'
+import modules from './config/modules'
+import plugins from './config/plugins'
+import pwa from './config/pwa'
+import target from './config/target'
+
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    title: 'qatar',
-    meta: [
-      { charset: 'utf-8' },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1, viewport-fit=cover',
-      },
-      {
-        name: 'apple-mobile-web-app-status-bar-style',
-        content: 'black-translucent',
-      },
-      {
-        name: 'apple-mobile-web-app-capable',
-        content: 'yes',
-      },
-      {
-        hid: 'og:site_name',
-        name: 'og:site_name',
-        content: 'Cancel Qatar',
-      },
-      {
-        hid: 'twitter:site',
-        name: 'twitter:site',
-        content: '@CancelQatar2022',
-      },
-      {
-        hid: 'twitter:creator',
-        name: 'twitter:creator',
-        content: '@CancelQatar2022',
-      },
-      {
-        hid: 'og:publisher',
-        name: 'og:publisher',
-        content: 'https://www.facebook.com/CancelWKQatar2022',
-      },
-      {
-        hid: 'og:twitter:card',
-        name: 'og:twitter:card',
-        content: 'summary_large_image',
-      },
-    ],
-  },
-
-  css: ['~/assets/css/base.css'],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    '~/plugins/vuelidate',
-    { src: '~/plugins/vue-announcer.js', mode: 'client' },
-  ],
-  apollo: {
-    clientConfigs: {
-      default: {
-        // required
-        httpEndpoint: `https://api.cancelqatar.nl/graphql`,
-      },
-    },
-  },
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: [
-    '~/components',
-    '~/components/Blog',
-    '~/components/Forms',
-    '~/components/Forms/FormComponents',
-    '~/components/Layout',
-    '~/components/Shared',
-    '~/components/Menu',
-  ],
-  i18n: {
-    defaultLocale: 'nl',
-    lazy: true,
-    seo: false,
-    langDir: 'locales/',
-    baseUrl: 'https://cancelqatar.netlify.app',
-    locales: [
-      {
-        name: 'Nederlands',
-        code: 'nl',
-        iso: 'nl-NL',
-        file: 'nl.json',
-      },
-    ],
-    vueI18nLoader: true,
-    vueI18n: {
-      dateTimeFormats: {
-        nl: {
-          short: {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          },
-        },
-      },
-    },
-  },
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
-  ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/svg-sprite',
-    '@nuxtjs/axios',
-    '@nuxtjs/apollo',
-    'nuxt-i18n',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-  ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    baseURL: process.env.BROWSER_BASE_URL,
-  },
-
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
-  pwa: {
-    manifest: {
-      lang: 'nl',
-    },
-  },
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    postcss: {
-      plugins: {
-        'postcss-mixins': {
-          mixinsDir: './assets/css/mixins/',
-        },
-        'postcss-preset-env': {
-          importFrom: ['./assets/css/media-queries/media-queries.css'],
-
-          features: {
-            'nesting-rules': true,
-            'custom-media-queries': true,
-            'media-query-ranges': true,
-          },
-        },
-      },
-    },
-  },
+  apollo,
+  axios,
+  build,
+  buildModules,
+  components,
+  css,
+  head,
+  i18n,
+  modules,
+  plugins,
+  pwa,
+  target,
 }
