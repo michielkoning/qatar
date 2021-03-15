@@ -5,6 +5,7 @@ export default {
     name: 'Cancel Qatar',
     shortName: 'Cancel Qatar',
     categories: ['politics', 'sports'],
+    orientation: 'portrait-primary',
   },
   meta: {
     twitterSite: '@CancelQatar2022',
