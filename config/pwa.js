@@ -4,6 +4,7 @@ export default {
     lang: 'nl',
     name: 'Cancel Qatar',
     shortName: 'Cancel Qatar',
+    categories: ['politics', 'sports'],
   },
   meta: {
     twitterSite: '@CancelQatar2022',
