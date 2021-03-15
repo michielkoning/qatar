@@ -8,7 +8,7 @@ export default {
     lang: 'nl',
     name: title,
     orientation: 'portrait-primary',
-    shortName: title,
+    short_name: title,
   },
   meta: {
     appleStatusBarStyle: 'black-translucent',
