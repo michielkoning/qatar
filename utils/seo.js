@@ -51,17 +51,15 @@ export default (seo) => {
         name: 'og:url',
         content: seo.opengraphUrl,
       },
-      { hid: 'og:type', name: 'og:type', content: 'article' },
+      {
+        hid: 'og:type',
+        name: 'og:type',
+        content: 'article',
+      },
       {
         hid: 'og:image',
         name: 'og:image',
         content: getMetaImage(seo, 'opengraphImage'),
-      },
-      // Twitter Card
-      {
-        hid: 'twitter:card',
-        name: 'twitter:card',
-        content: 'summary',
       },
       {
         hid: 'twitter:title',

@@ -1,5 +1,7 @@
 {
-  "name": "qatar",
+  "name": "cancel-qatar",
+  "description": "",
+  "author": "Michiel Koning",
   "version": "1.0.0",
   "private": true,
   "scripts": {
