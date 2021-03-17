@@ -1,0 +1,14 @@
+query GET_ARTICLES {
+  articles {
+    edges {
+      node {
+        id
+        date
+        title
+        articleSourceGroup {
+          url
+        }
+      }
+    }
+  }
+}

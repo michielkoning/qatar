@@ -1,13 +1,17 @@
 <template>
-  <ul v-if="posts.length">
-    <app-post v-for="post in posts" :key="post.node.id" :post="post.node" />
+  <ul v-if="articles.length">
+    <articles-list-item
+      v-for="article in articles"
+      :key="article.node.id"
+      :article="article.node"
+    />
   </ul>
 </template>
 
 <script>
 export default {
   props: {
-    posts: {
+    articles: {
       type: Array,
       default: () => [],
     },
@@ -19,9 +23,6 @@ export default {
 ul {
   @mixin list-reset;
 
-  display: grid;
-  grid-gap: var(--spacing-l);
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
   margin-bottom: 3em;
 }
 </style>

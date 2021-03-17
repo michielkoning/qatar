@@ -1,0 +1,16 @@
+#import "./Fragments/PageContent.gql"
+
+query GET_PAGE_ARTICLES($pageId: ID!) {
+  page(id: $pageId, idType: DATABASE_ID) {
+    ...pageContent
+    articlesGroup {
+      fieldGroupName
+      articles {
+        date
+        fieldGroupName
+        title
+        url
+      }
+    }
+  }
+}

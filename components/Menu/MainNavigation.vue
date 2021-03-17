@@ -19,8 +19,8 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="localePath('news')" @click.native="changePage">
-          <span class="title">Nieuws</span>
+        <nuxt-link :to="localePath('articles')" @click.native="changePage">
+          <span class="title">Artikelen</span>
         </nuxt-link>
       </li>
       <li>
