@@ -1,5 +1,5 @@
 export const apiUrl = 'https://api.cancelqatar.nl/graphql'
-export const baseUrl = 'https://cancelqatar.netlify.app'
+export const baseUrl = 'https://cancelqatar.nl/'
 export const categories = ['politics', 'sports']
 export const facebook = 'https://www.facebook.com/CancelWKQatar2022'
 export const themeColor = '#333'
