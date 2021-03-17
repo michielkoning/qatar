@@ -1,7 +1,9 @@
 <template>
   <div class="wrapper">
+    <h2>Ondertekenen</h2>
     <p v-if="submitted">
-      Het formulier is verzonden. We nemen zo spoedig mogelijk contact met u op.
+      Het ondertekenen is gelukt. Je ontvangt nu een e-mail om je e-mailadres te
+      bevestigen.
     </p>
     <form v-else action method="post" novalidate @submit.prevent="submit">
       <form-fieldset title="Petitie">
@@ -46,7 +48,7 @@
         </form-field>
       </form-fieldset>
       <p v-if="errorMessageForm">{{ errorMessageForm }}</p>
-      <app-button type="submit">Verzenden</app-button>
+      <app-button type="submit">Ik onderteken deze petitie</app-button>
     </form>
   </div>
 </template>
@@ -130,10 +132,17 @@ export default {
       }
       this.loading = true
       try {
-        await this.$axios.$post('https://subscribe.cancelqatar.nl', {
-          ...this.form,
-        })
-        this.submitted = true
+        const response = await this.$axios.$post(
+          'https://subscribe.cancelqatar.nl',
+          {
+            ...this.form,
+          }
+        )
+        if (!response) {
+          this.submitted = true
+        } else {
+          this.errorMessageForm = 'Er ging iets mis bij het aanmelden'
+        }
       } catch (error) {
         this.errorMessageForm = error
       } finally {
