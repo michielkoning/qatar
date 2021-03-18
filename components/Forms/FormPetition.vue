@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h2>Ondertekenen</h2>
+    <h2>Onderteken deze petitie</h2>
     <p v-if="submitted">
       Het ondertekenen is gelukt. Je ontvangt nu een e-mail om je e-mailadres te
       bevestigen.
@@ -152,9 +152,3 @@ export default {
   },
 }
 </script>
-
-<style lang="postcss" module>
-.bot-field {
-  display: none;
-}
-</style>
