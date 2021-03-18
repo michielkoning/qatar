@@ -43,27 +43,27 @@ export default {
 
 <style scoped lang="postcss">
 li {
-  padding: 0 0 2em 2em;
+  padding: 0 0 1em 2.5em;
   position: relative;
 
   &::before {
     position: absolute;
-    font-size: 2em;
+    font-size: 3em;
     left: 0;
-    font-weight: 300;
-    font-family: Georgia, Times, Times New Roman, serif;
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-headings);
     top: 0;
     line-height: 1;
     counter-increment: list;
-    opacity: 0.5;
-    content: counter(list) '.';
+    opacity: 0.2;
+    content: counter(list);
   }
 }
 
 .list {
   @mixin list-reset;
 
+  margin-top: 2em;
   counter-reset: list;
-  margin: 0 0 2em;
 }
 </style>

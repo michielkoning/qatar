@@ -2,10 +2,17 @@
   <div class="wrapper">
     <h2>Onderteken deze petitie</h2>
     <p v-if="submitted">
-      Het ondertekenen is gelukt. Je ontvangt nu een e-mail om je e-mailadres te
-      bevestigen.
+      Het verzenden van het formmulier is gelukt. Je ontvangt nu een e-mail om
+      je e-mailadres te bevestigen.
     </p>
-    <form v-else action method="post" novalidate @submit.prevent="submit">
+    <form
+      v-else
+      action
+      method="post"
+      novalidate
+      class="form"
+      @submit.prevent="submit"
+    >
       <form-fieldset title="Petitie">
         <form-field
           id="firstName"
@@ -152,3 +159,10 @@ export default {
   },
 }
 </script>
+
+<style scoped lang="postcss">
+.form {
+  margin-top: 2em;
+  max-width: 30em;
+}
+</style>

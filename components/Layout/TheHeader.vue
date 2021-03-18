@@ -13,7 +13,7 @@
         <transition name="fade">
           <div v-show="showMenu" ref="bg" class="content">
             <h1>
-              <router-link to="/">{{ title }}</router-link>
+              <router-link to="/">{{ title }} 2022</router-link>
             </h1>
             <main-navigation />
             <social-media-links />

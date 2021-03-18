@@ -1,6 +1,6 @@
 <template>
   <app-page :page="page">
-    <form-petition />
+    <form-petition class="form" />
   </app-page>
 </template>
 

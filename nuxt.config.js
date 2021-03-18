@@ -29,7 +29,7 @@ export default {
   modern: true,
   googleFonts: {
     families: {
-      Raleway: true,
+      Raleway: [400, 700],
       Arvo: true,
     },
   },
