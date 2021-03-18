@@ -5,11 +5,7 @@
     </h2>
     <ul class="social-links">
       <li>
-        <a
-          :href="`https://twitter.com/${twitter}`"
-          rel="noopener"
-          target="_blank"
-        >
+        <a :href="twitter" rel="noopener" target="_blank">
           <app-icon icon="twitter" />
           <span class="sr-only">
             {{ $t('viewOn', { title, network: 'Twitter' }) }}
@@ -29,13 +25,21 @@
 </template>
 
 <script>
-import { twitter, facebook, title } from '~/data/details'
+import { title } from '~/data/details'
 export default {
+  props: {
+    facebook: {
+      type: String,
+      required: true,
+    },
+    twitter: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       title,
-      facebook,
-      twitter,
     }
   },
 }

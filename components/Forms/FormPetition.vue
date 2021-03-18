@@ -161,8 +161,11 @@ export default {
 </script>
 
 <style scoped lang="postcss">
-.form {
+.wrapper {
   margin-top: 2em;
+}
+
+.form {
   max-width: 30em;
 }
 </style>

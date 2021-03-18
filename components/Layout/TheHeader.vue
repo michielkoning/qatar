@@ -16,7 +16,7 @@
               <router-link to="/">{{ title }} 2022</router-link>
             </h1>
             <main-navigation />
-            <social-media-links />
+            <social-media-links :twitter="twitterUrl" :facebook="facebook" />
           </div>
         </transition>
       </div>
@@ -26,16 +26,21 @@
 
 <script>
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
-import { title } from '~/data/details'
+import { twitter, facebook, title } from '~/data/details'
 
 export default {
   data() {
     return {
       title,
       showMenu: false,
+      facebook,
     }
   },
-
+  computed: {
+    twitterUrl() {
+      return `https://twitter.com/${twitter}`
+    },
+  },
   methods: {
     toggleMenu(status) {
       this.showMenu = status
