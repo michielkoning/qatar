@@ -1,6 +1,6 @@
 <template>
   <app-page :page="page">
-    <ul v-if="page.argumentsGroup.arguments.length" class="list">
+    <ol v-if="page.argumentsGroup.arguments.length" class="list">
       <li
         v-for="argument in page.argumentsGroup.arguments"
         :key="argument.title"
@@ -8,7 +8,7 @@
         <h2>{{ argument.title }}</h2>
         <p>{{ argument.text }}</p>
       </li>
-    </ul>
+    </ol>
     <app-button to="/petitie">Teken de petitie</app-button>
   </app-page>
 </template>
@@ -43,12 +43,27 @@ export default {
 
 <style scoped lang="postcss">
 li {
-  margin-bottom: 2em;
+  padding: 0 0 2em 2em;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    font-size: 2em;
+    left: 0;
+    font-weight: 300;
+    font-family: Georgia, Times, Times New Roman, serif;
+    top: 0;
+    line-height: 1;
+    counter-increment: list;
+    opacity: 0.5;
+    content: counter(list) '.';
+  }
 }
 
 .list {
   @mixin list-reset;
 
-  margin-bottom: 4em;
+  counter-reset: list;
+  margin: 0 0 2em;
 }
 </style>

@@ -10,7 +10,7 @@
           target="_blank">
       {{ article.title }}
     </a>
-    <div class="meta"><app-date :date="article.date" /> via {{ source }}</div>
+    <div class="meta"><app-date :date="article.date" />, {{ source }}</div>
   </li>
 </template>
 

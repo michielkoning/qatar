@@ -4,4 +4,5 @@ export default [
   '@nuxtjs/eslint-module',
   // https://go.nuxtjs.dev/stylelint
   '@nuxtjs/stylelint-module',
+  '@nuxtjs/google-fonts',
 ]

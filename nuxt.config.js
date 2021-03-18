@@ -27,4 +27,10 @@ export default {
   pwa,
   target,
   modern: true,
+  googleFonts: {
+    families: {
+      Raleway: true,
+      Arvo: true,
+    },
+  },
 }
