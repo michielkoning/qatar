@@ -36,4 +36,7 @@ export default {
       Arvo: true,
     },
   },
+  generate: {
+    fallback: true,
+  },
 }
