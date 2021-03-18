@@ -27,7 +27,7 @@ export default {
   },
   data() {
     return {
-      text: `Ik doe niet mee #nietbeschikaar`,
+      text: `Verplaats het WK uit Qatar! Onderteken de petitie aan de KNVB. #nietbeschikaar`,
     }
   },
   head() {
