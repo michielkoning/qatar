@@ -11,7 +11,7 @@ import SocialMediaLinks from '../components/Menu/SocialMediaLinks.vue'
 import PageQuery from '~/graphql/Page.gql'
 import getSeoMetaData from '~/utils/seo'
 import { pageIdSubscribeConfirmation } from '~/data/pages'
-
+import { baseUrl } from '~/data/details'
 export default {
   components: { SocialMediaLinks },
   async asyncData({ app }) {
@@ -36,13 +36,17 @@ export default {
 
   computed: {
     link() {
-      return this.localePath('petition')
+      return `${baseUrl}${this.localePath('petition')}`
     },
     twitterUrl() {
-      return `https://twitter.com/share?text=${this.text}&url=${this.link}`
+      return `https://twitter.com/share?text=${encodeURIComponent(
+        this.text
+      )}&url=${encodeURIComponent(this.link)}`
     },
     facebookUrl() {
-      return `https://www.facebook.com/sharer.php?u=${this.link}&p=${this.text}`
+      return `https://www.facebook.com/sharer.php?u=${encodeURIComponent(
+        this.link
+      )}&p=${encodeURIComponent(this.text)}`
     },
   },
   nuxtI18n: {
