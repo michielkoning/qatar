@@ -10,7 +10,7 @@
           :to="localePath('home')"
           @click.native="changePage"
         >
-          <span class="title">Home</span>
+          <span class="title">Waarom</span>
         </nuxt-link>
       </li>
       <li>
