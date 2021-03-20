@@ -2,8 +2,8 @@
   <div class="wrapper">
     <h2>Onderteken deze petitie</h2>
     <p v-if="submitted">
-      Het verzenden van het formmulier is gelukt. Je ontvangt nu een e-mail om
-      je e-mailadres te bevestigen.
+      Het verzenden van het formulier is gelukt. Je ontvangt nu een e-mail om je
+      e-mailadres te bevestigen.
     </p>
     <form
       v-else
