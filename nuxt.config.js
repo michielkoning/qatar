@@ -35,6 +35,7 @@ export default {
       },
       Arvo: true,
     },
+    display: 'swap',
   },
   generate: {
     fallback: true,
