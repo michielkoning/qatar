@@ -11,6 +11,7 @@
       method="post"
       novalidate
       class="form"
+      autocomplete="on"
       @submit.prevent="submit"
     >
       <form-fieldset title="Petitie">
@@ -25,6 +26,7 @@
             name="firstName"
             type="text"
             maxlength="255"
+            autocomplete="given-name"
           />
         </form-field>
         <form-field
@@ -36,6 +38,7 @@
             id="lastName"
             v-model.trim.lazy="$v.form.lastName.$model"
             name="lastName"
+            autocomplete="family-name"
             type="text"
             maxlength="255"
           />
@@ -51,6 +54,7 @@
             name="email"
             type="email"
             maxlength="255"
+            autocomplete="email"
           />
         </form-field>
       </form-fieldset>
