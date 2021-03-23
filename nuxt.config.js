@@ -26,7 +26,7 @@ export default {
   plugins,
   pwa,
   target,
-  modern: true,
+  modern: 'client',
   googleFonts: {
     families: {
       Raleway: {
