@@ -1,13 +1,7 @@
 <template>
   <li>
     <!-- eslint-disable-next-line -->
-    <a
-      :href="article.articleSourceGroup.url"
-            rel="noopener"
-
-
-
-          target="_blank">
+    <a :href="article.articleSourceGroup.url" rel="noopener" target="_blank">
       {{ article.title }}
     </a>
     <div class="meta"><app-date :date="article.date" />, {{ source }}</div>

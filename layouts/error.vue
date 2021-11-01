@@ -32,12 +32,3 @@ export default {
   },
 }
 </script>
-
-<i18n>
-{
-  "nl": {
-    "title404": "Pagina niet gevonden",
-    "title500": "Er is een fout opgetreden"
-  }
-}
-</i18n>
