@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { replacePlaceholder } from '~/helpers/i18n'
+// import { replacePlaceholder } from '~/helpers/i18n'
 import EventBusUtil from '~/utils/eventBusUtil'
 
 export default {
@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     generateLocalePath(code) {
-      return this.switchLocalePath(code).replace(replacePlaceholder, '')
+      return null // this.switchLocalePath(code).replace(replacePlaceholder, '')
     },
     changePage() {
       if (!this.isSmallScreen) return
