@@ -9,7 +9,9 @@
         <p>{{ argument.text }}</p>
       </li>
     </ol>
-    <app-button to="/petitie">Teken de petitie</app-button>
+    <app-button :to="localePath('petition')">
+      {{ $t('formPetition.link') }}
+    </app-button>
   </app-page>
 </template>
 

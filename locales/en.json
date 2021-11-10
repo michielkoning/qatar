@@ -23,6 +23,7 @@
   "title500": "An error occurred",
   "menu": "Menu",
   "formPetition": {
+    "link": "Sign the petition",
     "title": "Sign this petition",
     "btn": "Sign the petition",
     "error": "Something went wrong with submitting the form",

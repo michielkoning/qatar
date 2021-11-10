@@ -23,6 +23,7 @@
   "title500": "Er is een fout opgetreden",
   "menu": "Menu",
   "formPetition": {
+    "link": "Teken de petitie",
     "title": "Onderteken deze petitie",
     "btn": "Ik onderteken deze petitie",
     "error": "Er ging iets mis bij het versturen",
