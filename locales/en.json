@@ -1,33 +1,40 @@
 {
-  "close": "Close",
+  "close": "Sluiten",
   "form": {
     "botField": "Vul dit niet in als je mens bent",
-    "email": "Email address",
-    "firstName": "First name",
-    "lastName": "Last name",
+    "email": "E-mailadres",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
     "error": {
       "email": {
         "email": "Vul een geldige e-mailadres in."
       },
       "general": {
         "invalid": "Niet alle velden zijn correct ingevuld.",
-        "motivationEmpty": "Je hebt nog geen motivatie ingevuld.",
-        "required": "Vul je {field} in.",
-        "selectDateEmpty": "Je hebt nog geen datum geselecteerd.",
-        "submitError": "Er ging iets mis bij het posten."
+        "required": "Vul je {field} in."
       }
     }
   },
   "home": "Home",
-  "latestPosts": "Load more post",
+  "latestPosts": "Laatste berichten",
   "loadMore": "Laad meer berichten",
-  "loading": "Loading",
-  "mainNavigation": "Main navigation",
+  "loading": "Aan het laden",
+  "mainNavigation": "Hoofdnavigatie",
   "menu": "Menu",
-  "readMore": "Read more",
+  "readMore": "Lees verder",
   "socialMediaLinks": "Social media links",
-  "viewOn": "View %{title} op %{network}",
-  "visitOn": "Visist %{title} op %{network}",
-  "title404": "Page not found",
-  "title500": "An error occured"
+  "viewOn": "Bekijk %{title} op %{network}",
+  "visitOn": "Bezoek %{title} op %{network}",
+  "title404": "Pagina niet gevonden",
+  "title500": "Er is een fout opgetreden",
+  "formPetition": {
+    "title": "Onderteken deze petitie",
+    "btn": "Ik onderteken deze petitie",
+    "error": "Er ging iets mis bij het aanmelden",
+    "success": "Het verzenden van het formulier is gelukt. Je ontvangt nu een e-mail om je e-mailadres te bevestigen."
+  },
+  "skipLinks": {
+    "content": "Naar hoofdinhoud",
+    "menu": "Nasar hoofdnavigatiemenu"
+  }
 }

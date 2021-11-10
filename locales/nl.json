@@ -11,10 +11,7 @@
       },
       "general": {
         "invalid": "Niet alle velden zijn correct ingevuld.",
-        "motivationEmpty": "Je hebt nog geen motivatie ingevuld.",
-        "required": "Vul je {field} in.",
-        "selectDateEmpty": "Je hebt nog geen datum geselecteerd.",
-        "submitError": "Er ging iets mis bij het posten."
+        "required": "Vul je {field} in."
       }
     }
   },
@@ -29,5 +26,15 @@
   "viewOn": "Bekijk %{title} op %{network}",
   "visitOn": "Bezoek %{title} op %{network}",
   "title404": "Pagina niet gevonden",
-  "title500": "Er is een fout opgetreden"
+  "title500": "Er is een fout opgetreden",
+  "formPetition": {
+    "title": "Onderteken deze petitie",
+    "btn": "Ik onderteken deze petitie",
+    "error": "Er ging iets mis bij het aanmelden",
+    "success": "Het verzenden van het formulier is gelukt. Je ontvangt nu een e-mail om je e-mailadres te bevestigen."
+  },
+  "skipLinks": {
+    "content": "Naar hoofdinhoud",
+    "menu": "Nasar hoofdnavigatiemenu"
+  }
 }

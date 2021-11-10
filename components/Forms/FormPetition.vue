@@ -1,9 +1,8 @@
 <template>
   <div class="wrapper">
-    <h2>Onderteken deze petitie</h2>
+    <h2>{{ $t('formPetition.title') }}</h2>
     <p v-if="submitted">
-      Het verzenden van het formulier is gelukt. Je ontvangt nu een e-mail om je
-      e-mailadres te bevestigen.
+      {{ $t('formPetition.success') }}
     </p>
     <form
       v-else
@@ -59,7 +58,7 @@
         </form-field>
       </form-fieldset>
       <p v-if="errorMessageForm">{{ errorMessageForm }}</p>
-      <app-button type="submit">Ik onderteken deze petitie</app-button>
+      <app-button type="submit">{{ $t('formPetition.btn') }}</app-button>
     </form>
   </div>
 </template>
@@ -144,7 +143,7 @@ export default {
       this.loading = true
       try {
         const response = await this.$axios.$post(
-          'https://subscribe.cancelqatar.nl',
+          'https://subscaribe.cancelqatar.nl',
           {
             ...this.form,
           }
@@ -152,10 +151,10 @@ export default {
         if (!response) {
           this.submitted = true
         } else {
-          this.errorMessageForm = 'Er ging iets mis bij het aanmelden'
+          this.errorMessageForm = this.$t('formPetition.error')
         }
       } catch (error) {
-        this.errorMessageForm = error
+        this.errorMessageForm = `${this.$t('formPetition.error')} ${error}`
       } finally {
         this.loading = false
       }

@@ -1,7 +1,7 @@
 <template>
   <div class="skip-links">
-    <a href="#content" class="btn">Naar hoofdinhoud</a>
-    <a href="#menu" class="btn">Naar hoofdnavigatiemenu</a>
+    <a href="#content" class="btn">{{ $t('skipLinks.content') }}</a>
+    <a href="#menu" class="btn">{{ $t('skipLinks.menu') }}</a>
   </div>
 </template>
 
