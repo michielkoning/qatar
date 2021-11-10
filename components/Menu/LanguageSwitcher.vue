@@ -4,7 +4,7 @@
       v-for="locale in availableLocales"
       :key="locale.code"
       :class="$style.link"
-      :to="generateLocalePath(locale.code)"
+      :to="switchLocalePath(locale.code)"
       @click.native="changePage"
     >
       <app-icon :icon="`flag-${locale.code}`" :title="locale.name" />
@@ -13,7 +13,6 @@
 </template>
 
 <script>
-// import { replacePlaceholder } from '~/helpers/i18n'
 import EventBusUtil from '~/utils/eventBusUtil'
 
 export default {
@@ -23,12 +22,9 @@ export default {
     },
   },
   methods: {
-    generateLocalePath(code) {
-      return null // this.switchLocalePath(code).replace(replacePlaceholder, '')
-    },
     changePage() {
       if (!this.isSmallScreen) return
-      EventBusUtil.$emit('change-page')
+      EventBusUtil.$emit('header-close-mobile-menu')
     },
     isSmallScreen() {
       return window.innerWidth < 768

@@ -1,6 +1,6 @@
 <template>
   <app-page v-if="page" :page="page">
-    <h2>Deel de petitie</h2>
+    <h2>{{ $t('sharePetition.title') }}</h2>
     <div class="quote">{{ text }}</div>
     <social-media-links :twitter="twitterUrl" :facebook="facebookUrl" />
   </app-page>
@@ -15,10 +15,12 @@ import { baseUrl } from '~/data/details'
 export default {
   components: { SocialMediaLinks },
   async asyncData({ app }) {
+    const language = app.i18n.locale
+
     const page = await app.apolloProvider.defaultClient.query({
       query: PageQuery,
       variables: {
-        pageId: pageIdSubscribeConfirmation,
+        pageId: pageIdSubscribeConfirmation[language],
       },
     })
     return {
@@ -27,7 +29,7 @@ export default {
   },
   data() {
     return {
-      text: `Verplaats het WK uit Qatar! Onderteken de petitie aan de KNVB. #nietbeschikaar`,
+      text: this.$t('sharePetition.text'),
     }
   },
   head() {
@@ -52,6 +54,7 @@ export default {
   nuxtI18n: {
     paths: {
       nl: '/bevestiging-inschrijving',
+      en: '/registration-confirmation',
     },
   },
 }

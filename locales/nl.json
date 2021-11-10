@@ -1,7 +1,6 @@
 {
   "close": "Sluiten",
   "form": {
-    "botField": "Vul dit niet in als je mens bent",
     "email": "E-mailadres",
     "firstName": "Voornaam",
     "lastName": "Achternaam",
@@ -15,22 +14,18 @@
       }
     }
   },
-  "home": "Home",
-  "latestPosts": "Laatste berichten",
-  "loadMore": "Laad meer berichten",
   "loading": "Aan het laden",
-  "mainNavigation": "Hoofdnavigatie",
   "readMore": "Lees verder",
   "socialMediaLinks": "Social media links",
   "viewOn": "Bekijk %{title} op %{network}",
   "visitOn": "Bezoek %{title} op %{network}",
   "title404": "Pagina niet gevonden",
   "title500": "Er is een fout opgetreden",
-  "menu": "menu",
+  "menu": "Menu",
   "formPetition": {
     "title": "Onderteken deze petitie",
     "btn": "Ik onderteken deze petitie",
-    "error": "Er ging iets mis bij het aanmelden",
+    "error": "Er ging iets mis bij het versturen",
     "success": "Het verzenden van het formulier is gelukt. Je ontvangt nu een e-mail om je e-mailadres te bevestigen."
   },
   "skipLinks": {
@@ -43,5 +38,9 @@
     "articles": "Artikelen",
     "background": " Achtergrond",
     "aboutUs": "Over"
+  },
+  "sharePetition": {
+    "title": "Deel de petitie",
+    "text": "Verplaats het WK uit Qatar! Onderteken de petitie aan de KNVB. #nietbeschikaar"
   }
 }

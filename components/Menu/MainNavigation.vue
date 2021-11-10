@@ -20,7 +20,7 @@
       </li>
       <li>
         <nuxt-link
-          v-if="$i18n.locale"
+          v-if="$i18n.locale === 'nl'"
           :to="localePath('articles')"
           @click.native="changePage"
         >

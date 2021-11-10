@@ -1,40 +1,46 @@
 {
-  "close": "Sluiten",
+  "close": "Close",
   "form": {
-    "botField": "Vul dit niet in als je mens bent",
-    "email": "E-mailadres",
-    "firstName": "Voornaam",
-    "lastName": "Achternaam",
+    "email": "Email address",
+    "firstName": "First name",
+    "lastName": "Last name",
     "error": {
       "email": {
-        "email": "Vul een geldige e-mailadres in."
+        "email": "Please enter a valid email address"
       },
       "general": {
-        "invalid": "Niet alle velden zijn correct ingevuld.",
+        "invalid": "Not all fields are valid",
         "required": "Vul je {field} in."
       }
     }
   },
-  "home": "Home",
-  "latestPosts": "Laatste berichten",
-  "loadMore": "Laad meer berichten",
-  "loading": "Aan het laden",
-  "mainNavigation": "Hoofdnavigatie",
-  "menu": "Menu",
-  "readMore": "Lees verder",
+  "loading": "Loading",
+  "readMore": "Read more",
   "socialMediaLinks": "Social media links",
-  "viewOn": "Bekijk %{title} op %{network}",
-  "visitOn": "Bezoek %{title} op %{network}",
-  "title404": "Pagina niet gevonden",
-  "title500": "Er is een fout opgetreden",
+  "viewOn": "View %{title} on %{network}",
+  "visitOn": "Visit %{title} on %{network}",
+  "title404": "Page not found",
+  "title500": "An error occurred",
+  "menu": "Menu",
   "formPetition": {
-    "title": "Onderteken deze petitie",
-    "btn": "Ik onderteken deze petitie",
-    "error": "Er ging iets mis bij het aanmelden",
-    "success": "Het verzenden van het formulier is gelukt. Je ontvangt nu een e-mail om je e-mailadres te bevestigen."
+    "title": "Sign this petition",
+    "btn": "Sign the petition",
+    "error": "Something went wrong with submitting the form",
+    "success": "The petition has been sent. You will receive an e-mail to confirm your e-mail address"
   },
   "skipLinks": {
-    "content": "Naar hoofdinhoud",
-    "menu": "Nasar hoofdnavigatiemenu"
+    "content": "To main content",
+    "menu": "To main navigation"
+  },
+  "menuItems": {
+    "home": "Why",
+    "petition": "Petition",
+    "articles": "Articles",
+    "background": "Background",
+    "aboutUs": "About us"
+  },
+  "sharePetition": {
+    "title": "Share the petition",
+    "text": "Move the World Cup away from Qatar! Sign the petition to the KNVB. #nietbeschikaar"
   }
 }
