@@ -9,10 +9,12 @@ import { pageIdAboutUs } from '~/data/pages'
 
 export default {
   async asyncData({ app }) {
+    const language = app.i18n.locale
+
     const page = await app.apolloProvider.defaultClient.query({
       query: PageQuery,
       variables: {
-        pageId: pageIdAboutUs,
+        pageId: pageIdAboutUs[language],
       },
     })
     return {
@@ -25,6 +27,7 @@ export default {
   nuxtI18n: {
     paths: {
       nl: '/over-ons',
+      en: '/about-us',
     },
   },
 }

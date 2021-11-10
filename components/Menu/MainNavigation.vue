@@ -10,27 +10,31 @@
           :to="localePath('home')"
           @click.native="changePage"
         >
-          <span class="title">Waarom</span>
+          <span class="title">{{ $t('menuItems.home') }}</span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link :to="localePath('petition')" @click.native="changePage">
-          <span class="title">Petitie</span>
+          <span class="title">{{ $t('menuItems.petition') }}</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="localePath('articles')" @click.native="changePage">
-          <span class="title">Artikelen</span>
+        <nuxt-link
+          v-if="$i18n.locale"
+          :to="localePath('articles')"
+          @click.native="changePage"
+        >
+          <span class="title">{{ $t('menuItems.articles') }}</span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link :to="localePath('background')" @click.native="changePage">
-          <span class="title"> Achtergrond</span>
+          <span class="title">{{ $t('menuItems.background') }}</span>
         </nuxt-link>
       </li>
       <li>
         <nuxt-link :to="localePath('aboutUs')" @click.native="changePage">
-          <span class="title">Over ons</span>
+          <span class="title">{{ $t('menuItems.aboutUs') }}</span>
         </nuxt-link>
       </li>
     </ul>

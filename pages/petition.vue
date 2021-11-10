@@ -11,10 +11,12 @@ import { pageIdPetition } from '~/data/pages'
 
 export default {
   async asyncData({ app }) {
+    const language = app.i18n.locale
+
     const page = await app.apolloProvider.defaultClient.query({
       query: PageQuery,
       variables: {
-        pageId: pageIdPetition,
+        pageId: pageIdPetition[language],
       },
     })
     return {

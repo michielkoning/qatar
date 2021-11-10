@@ -20,13 +20,13 @@
   "loadMore": "Laad meer berichten",
   "loading": "Aan het laden",
   "mainNavigation": "Hoofdnavigatie",
-  "menu": "Menu",
   "readMore": "Lees verder",
   "socialMediaLinks": "Social media links",
   "viewOn": "Bekijk %{title} op %{network}",
   "visitOn": "Bezoek %{title} op %{network}",
   "title404": "Pagina niet gevonden",
   "title500": "Er is een fout opgetreden",
+  "menu": "menu",
   "formPetition": {
     "title": "Onderteken deze petitie",
     "btn": "Ik onderteken deze petitie",
@@ -36,5 +36,12 @@
   "skipLinks": {
     "content": "Naar hoofdinhoud",
     "menu": "Nasar hoofdnavigatiemenu"
+  },
+  "menuItems": {
+    "home": "Waarom",
+    "petition": "Petitie",
+    "articles": "Artikelen",
+    "background": " Achtergrond",
+    "aboutUs": "Over"
   }
 }
