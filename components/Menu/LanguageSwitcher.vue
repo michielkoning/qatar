@@ -7,7 +7,8 @@
       :to="switchLocalePath(locale.code)"
       @click.native="changePage"
     >
-      <app-icon :icon="`flag-${locale.code}`" :title="locale.name" />
+      <app-icon :icon="`flag-${locale.code}`" />
+      {{ locale.name }}
     </nuxt-link>
   </div>
 </template>
@@ -39,24 +40,7 @@ export default {
 
   margin-bottom: var(--spacing-xxs);
   display: flex;
+  gap: 0.5em;
   align-items: center;
-
-  @media (--navigation-md) {
-    display: inline-block;
-    margin: 0 var(--spacing-xxs);
-  }
-}
-
-.title {
-  box-shadow: 0 1px 0 0 currentColor;
-  margin-left: var(--spacing-xs);
-
-  @nest .link:hover &, .link:focus & {
-    box-shadow: 0 2px 0 0 currentColor;
-  }
-
-  @media (--navigation-md) {
-    @mixin sr-only;
-  }
 }
 </style>

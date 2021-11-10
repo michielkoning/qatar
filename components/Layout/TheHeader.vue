@@ -16,7 +16,6 @@
               <router-link to="/">{{ title }} 2022</router-link>
             </h1>
             <main-navigation />
-            <language-switcher />
             <social-media-links :twitter="twitterUrl" :facebook="facebook" />
           </div>
         </transition>

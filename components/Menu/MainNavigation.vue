@@ -37,6 +37,16 @@
           <span class="title">{{ $t('menuItems.aboutUs') }}</span>
         </nuxt-link>
       </li>
+      <li v-for="locale in availableLocales" :key="locale.code">
+        <nuxt-link
+          :to="switchLocalePath(locale.code)"
+          class="language-link"
+          @click.native="changePage"
+        >
+          {{ locale.name }}
+          <app-icon :icon="`flag-${locale.code}`" class="flag" />
+        </nuxt-link>
+      </li>
     </ul>
     <div
       :style="{ '-webkit-transform': arrowPosition, transform: arrowPosition }"
@@ -57,6 +67,9 @@ export default {
   computed: {
     step() {
       return this.$store.state.step
+    },
+    availableLocales() {
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale)
     },
   },
   watch: {
@@ -172,5 +185,16 @@ a {
       border-left: calc(var(--spacing-m) + 4px) solid var(--color-black);
     }
   }
+}
+
+.language-link {
+  margin-top: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.flag {
+  transform: translateY(0.1em);
 }
 </style>
