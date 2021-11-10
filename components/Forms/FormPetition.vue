@@ -143,7 +143,7 @@ export default {
       this.loading = true
       try {
         const response = await this.$axios.$post(
-          'https://subscaribe.cancelqatar.nl',
+          'https://subscribe.cancelqatar.nl',
           {
             ...this.form,
           }
